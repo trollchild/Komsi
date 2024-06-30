@@ -39,7 +39,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Application definition
 
 INSTALLED_APPS = [
-    'jazzmin',
+#    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -174,29 +174,29 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 PROJECT_NAME = "Komsi"
-JAZZMIN_SETTINGS = {
+#JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
-    "site_title": PROJECT_NAME,
+#    "site_title": PROJECT_NAME,
 
     # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": PROJECT_NAME,
+#    "site_header": PROJECT_NAME,
 
     # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_brand": PROJECT_NAME,
+#    "site_brand": PROJECT_NAME,
 
     # Welcome text on the login screen
-    "welcome_sign": f"Welcome to the {PROJECT_NAME}",
+#    "welcome_sign": f"Welcome to the {PROJECT_NAME}",
 
     # "site_logo": "something.png",
-    "site_logo_classes": "",
+#    "site_logo_classes": "",
 
     # Copyright on the footer
-    "copyright": "Saif Hosari Ltd",
+#    "copyright": "Saif Hosari Ltd",
 
     # List of model admins to search from the search bar, search bar omitted if excluded
     # If you want to use a single search field you dont need to use a list, you can use a simple string
-    "search_model": ["auth.User", "auth.Group"],
+#    "search_model": ["auth.User", "auth.Group"],
 
     # Field name on user model that contains avatar ImageField/URLField/Charfield or a callable that receives the user
-    "user_avatar": None,
-}
+#    "user_avatar": None,
+#}
