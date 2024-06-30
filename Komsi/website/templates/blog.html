@@ -1,0 +1,163 @@
+{% extends "new_base.html" %}
+{% load static %}
+
+{% block content %}
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Uutisia</h2>
+
+          <ol>
+            <li><a href="{% url 'home' %}">Etusivu</a></li>
+            <li>Blogi</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            {% for post in posts %}
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="{{ post.image.url }}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">{{ post.title }}</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Raksire</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="{{ post.timestamp }}">{{ post.timestamp }}</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  {{ post.meta_description }}
+                </p>
+                <div class="read-more">
+                  <a href="{% url 'blog_post_detail' post.slug %}">Lue lisää</a>
+                </div>
+              </div>
+
+            </article><!-- End blog entry -->
+            {% endfor %}
+
+            <div class="blog-pagination">
+              {% if has_next %}
+              <div class='load_more_blog_posts_span text-center mb-5'><a data-url="/get-blog-posts?page=2" id="load_more_blog_posts" class="btn btn-secondary">Lue lisää</a></div>
+              {% endif %}
+            </div>
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Uusimmat</h3>
+              <div class="sidebar-item recent-posts">
+
+{% for post in posts %}
+                <div class="post-item clearfix">
+                  <img src="assets/img/blog/blog-recent-1.jpg" alt="">
+                  <h4><a href="{% url 'blog_post_detail' post.slug %}">{{ post.title }}</a></h4>
+                  <time datetime="2020-01-01">{{ post.timestamp }}</time>
+                </div>
+{% endfor %}
+
+
+
+              </div><!-- End sidebar recent posts-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+{% endblock %}
+
+{% block javascript %}
+<script>
+  $("#load_more_blog_posts").on('click', function () {
+    var url = $(this).attr("data-url");
+    $.ajax({
+      url: url,
+      method: "GET",
+      success: function (data) {
+        for (var i=0; i<data.posts.length; i++) {
+          $(".blog_posts").append(`
+          <div class="card w-100 mt-5 mb-5">
+            <img src="${data.posts[i]['image']}"" class="card-img-top" alt="..." />
+            <div class="card-body" style="color: #005c73">
+              <h3 class="card-title">${data.posts[i]['title']}"</h3>
+              <p class="card-text text-dark">${data.posts[i]['content']}"</p>
+              <a href="/post/${data.posts[i]['id']}" class="btn btn-dark">Read More</a>
+              {% if user.is_authenticated %}
+                <a href="/admin/kotisivut/blogpost/${data.posts[i]['id']}/change/" class="btn btn-success" style="border-color: #005c73;">Edit</a>
+                <a href="/admin/kotisivut/blogpost/${data.posts[i]['id']}/delete/" class="btn btn-danger" style="border-color: #005c73;">delete</a>
+              {% endif %}
+            </div>
+          </div>
+          <article class="entry">
+
+            <div class="entry-img">
+              <img src="${data.posts[i]['image']}" alt="" class="img-fluid">
+            </div>
+
+            <h2 class="entry-title">
+              <a href="blog-single.html">${data.posts[i]['title']}</a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{ post.timestamp }}</time></a></li>
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <p>
+                ${data.posts[i]['meta_description']}
+              </p>
+              <div class="read-more">
+                <a href="/blog/${data.posts[i]['slug']}">Read More</a>
+              </div>
+            </div>
+
+          </article><!-- End blog entry -->
+        `);
+          if (data.has_next) {
+            $("#load_more_blog_posts").attr("data-url",  `/get-blog-posts?page=${(data.number + 1)}`);
+          } else {
+            $(".load_more_blog_posts_span").html('');
+          }
+        }
+      }
+    })
+
+  })
+
+  </script>
+</script>
+{% endblock %}

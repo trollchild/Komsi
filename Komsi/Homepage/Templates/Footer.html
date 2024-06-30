@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+{% load static %}
+{% load bootstrap5 %}
+
+<footer class="col-sm-12" id="Sticky" style="background-image: url('{% static 'Teollisuushalli kuva.jpeg' %}'); background-size: cover; background-position: center;">
+
+  <div class="col-sm-12 mt-2" style="border-bottom: solid 1px gray; background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+
+    <div class="row">
+      {% if English %}
+      <div class="col-sm-6 text-center">
+        <p class="text-white h6"><b>Contact</b></p>
+        <p class="mt-2 text-white">
+          Raksire OY<br>
+          Identity code<br>
+          Phone <br>
+          E-mail myynti@komsi.net<br>
+
+        </p>
+        <a class="h6 text-center text-white btn btn-dark" href="tel:+358407240999">Call +358407240999</a>
+      </div>
+      {% else %}
+      <div class="col-sm-6 text-center">
+        <p class="text-white h5 mt-3">Yhteystiedot</p>
+        <p class="mt-3 p-4 text-white">
+          I.Komsi Oy<br>
+          Y-tunnus<br>
+          Puhelinnumero<br>
+          Sähköposti myynti@komsi.net<br>
+
+        </p>
+        <a class="h6 text-center text-white btn btn-dark" href="tel:+358407240999" id="soitafooter">Soita +358407240999</a>
+      </div>
+      {% endif %}
+
+			<div class="col-sm-6 text-center mt-3">
+			  <p class="text-white h5 mt-3">Facebook, LinkedIn, Instagram</p>
+			  <div class="col-sm-12 mt-3">
+			    <a href="https://www.facebook.com/profile.php?id=100088729030945"><i class="text-white h1 ml-2 fa-brands fa-facebook"></i></a>
+			    <i class="text-white h1 ml-2 fa-brands fa-linkedin"></i>
+			    <i class="text-white h1 ml-2 fa-brands fa-instagram"></i>
+			  </div>
+			  <div class="col-sm-12 mt-3 text-center d-flex justify-content-center align-items-center">
+          <div class="row d-sm-none">
+            <div class="col-6">
+              <img class="mt-2 img-fluid d-block d-sm-none mx-auto" src="{% static 'luotettava-kumppani-sm.jpg' %}" style="width: 100%;" alt="Luotettava Kumppani Logo">
+
+            </div>
+            <div class="col-6">
+          <a href="https://www.rala.fi/"><img class="mt-2 img-fluid d-block d-sm-none mx-auto" src="{% static 'RALA_patevyys.png' %}" style="width: 100%;" alt="Rala pätevyys"></a>
+
+            </div>
+
+        </div>
+        <div class="d-none d-sm-block mx-auto">
+          <div class="col-sm-12">
+        <img class="mt-2 img-fluid d-none d-sm-block mx-auto" src="{% static 'luotettava-kumppani-sm.jpg' %}" style="width: 25%;" alt="Luotettava Kumppani Logo">
+          <a href="https://www.rala.fi/"><img class="mt-2 img-fluid d-none d-sm-block mx-auto" src="{% static 'RALA_patevyys.png' %}" style="width: 25%;" alt="Rala pätevyys"></a>
+        </div>
+        </div>
+			</div>
+
+    </div>
+  </div>
+  <div class="col-sm-12 text-center text-white mt-2">
+    <a href="https://www.nipe.fi" class="text-center h6">
+      <a href="/Cookies" class="text-white h6">Evästeet</a><br>Copyright @ Raksire 2022<br>
+      Toteutus <a class="h6" href="https://www.nipe.fi">Nipe Digital Solutions Oy</a>
+    </a>
+  </div>
+
+</footer>
+
+<style>
+
+#Sticky {
+	border-top: 2px solid orange;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	margin-left: 0 !important; /* Remove the default left margin */
+	margin-right: 0 !important; /* Remove the default right margin */
+	padding: 0 !important;
+}
+
+</style>

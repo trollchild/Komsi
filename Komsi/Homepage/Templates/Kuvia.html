@@ -1,0 +1,487 @@
+{% extends "Base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<Head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MNNGQ9KM');</script>
+<!-- End Google Tag Manager -->
+    <title>Raksire - Aikaisemmat rakennusprojektit ja sähköasennukset uudellamaalla</title>
+    <meta name="description" content="Kuvia Raksire oy aikaisemmista töistä">
+    <!-- keywords -->
+    <meta name="keywords" content="rakennusprojektit, sähköasennukset, uudellamaalla, referenssit">
+</Head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVZV4SJT8D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GVZV4SJT8D');
+  gtag('config', 'AW-11171081614');
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNNGQ9KM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="col-sm-12 text-dark p-2 text-center bg-white" id="refrencefirst">
+
+  {% if English %}
+  <div class="col-sm-12 mt-4 h3">Construction services Raksire Oy</div>
+  <div class="col-sm-12 h5 mt-4" style="color: gray;">Previous projects listed below<br><br>
+    <a href="Yhteydenotto" class="h5" style="color: black;">Contact us for free cost estimate</a>
+  </div>
+  {% else %}
+  <div class="col-sm-12" style="height:400px;">
+  <div class="col-sm-12" style="margin-top:250px; height:80px; color: white;">Kuvia
+  </div>
+  <div class="col-sm-12 h5 mt-4" style="color: white;">Kuvia rakennustöistä<br><br>
+
+  </div>
+  </div>
+
+  {% endif %}
+  </div>
+
+
+  <div class="row mt-4 bg-white" style="border-top: 3px solid #fcd806;">
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-8">
+<div class="col-sm-12">
+  <a href="/Referenssit" class="ml-3 mt-3 btn btn-md btn-dark">Takaisin referensseihin</a>
+</div>
+
+<div class="col-sm-12 bg-white">
+  <div class="row ">
+    {% for thepicture in Gallery %}
+      <div class="col-sm-3 h4 mt-1 text-center p-2">
+        <a href="{{ thepicture.picture.url }}" class="p2 bg-success">
+          <img src="{{ thepicture.picture.url }}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+          </a>
+      </div>
+    {% endfor %}
+    {%if Emannantie %}
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Emannantie1.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Emannantie1.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Emannantie2.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Emannantie2.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Emannantie3.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Emannantie3.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Emannantie4.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Emannantie4.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Emannantie5.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Emannantie5.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Emannantie6.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Emannantie6.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Emannantie7.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Emannantie7.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    {% endif %}
+    {%if Jysk %}
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Jysk1.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Jysk1.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Jysk2.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Jysk2.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Jysk3.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Jysk3.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Jysk4.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Jysk4.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Jysk5.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Jysk5.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Jysk6.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Jysk6.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    {% endif %}
+    {%if SoukkaSauna %}
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'SoukkaSauna.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'SoukkaSauna.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    {% endif %}
+    {%if Hallityomaaview %}
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Teollisuushalli2.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Teollisuushalli2.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Teollisuushalli3.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Teollisuushalli3.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Teollisuushalli4.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Teollisuushalli4.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Teollisuushalli5.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Teollisuushalli5.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Teollisuushalli6.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Teollisuushalli6.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Teollisuushalli8.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Teollisuushalli8.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    {% endif %}
+    {%if Rengashalliview %}
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'Myymalaremontti1.jpg' %}" class="p2 bg-success">
+        <img src="{% static 'Myymalaremontti1.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    {%endif%}
+    {%if Rivitaloremonttiview %}
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos1.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos1.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos2.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos2.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos3.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos3.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos4.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos4.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos5.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos5.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos6.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos6.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos7.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos7.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos8.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos8.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos9.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos9.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos10.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos10.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos11.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos11.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos12.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos12.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos13.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos13.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos14.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos14.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos15.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos15.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos16.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos16.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos17.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos17.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    <div class="col-sm-3 h4 mt-1 text-center p-2">
+      <a href="{% static 'RivitaloMuutos18.jpeg' %}" class="p2 bg-success">
+        <img src="{% static 'RivitaloMuutos18.jpeg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+        </a>
+    </div>
+    {%endif%}
+
+{%if Lumiesteidenasennusview%}
+<div class="col-sm-3 h4 mt-1 text-center p-2">
+  <a href="{% static 'Lumieste1.jpg' %}" class="p2 bg-success">
+    <img src="{% static 'Lumieste1.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+    </a>
+</div>
+<div class="col-sm-3 h4 mt-1 text-center p-2">
+  <a href="{% static 'Lumieste2.jpg' %}" class="p2 bg-success">
+    <img src="{% static 'Lumieste2.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+    </a>
+</div>
+<div class="col-sm-3 h4 mt-1 text-center p-2">
+  <a href="{% static 'Lumieste3.jpg' %}" class="p2 bg-success">
+    <img src="{% static 'Lumieste3.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+    </a>
+</div>
+{% endif%}
+
+{%if Rivitalonsahkourakointiview%}
+<div class="col-sm-3 h4 mt-1 text-center p-2">
+  <a href="{% static 'Sahko1.jpg' %}" class="p2 bg-success">
+    <img src="{% static 'Sahko1.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+    </a>
+</div>
+<div class="col-sm-3 h4 mt-1 text-center p-2">
+  <a href="{% static 'Sahko2.jpg' %}" class="p2 bg-success">
+    <img src="{% static 'Sahko2.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+    </a>
+</div>
+<div class="col-sm-3 h4 mt-1 text-center p-2">
+  <a href="{% static 'Sahko3.jpg' %}" class="p2 bg-success">
+    <img src="{% static 'Sahko3.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+    </a>
+</div>
+{%endif%}
+            {% if Uudisrakentaminenview %}
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'Uudis1.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'Uudis1.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'Uudis2.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'Uudis2.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'Uudis3.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'Uudis3.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'Uudis4.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'Uudis4.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'Uudis5.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'Uudis5.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'Uudis8.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'Uudis8.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            {%endif %}
+            {% if Hietaniemenkadultaa %}
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'Kerros1.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'Kerros1.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'Kerros2.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'Kerros2.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'Kerros3.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'Kerros3.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'Kerros4.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'Kerros4.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'Kerros5.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'Kerros5.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            {% endif %}
+
+            {%if yleisesti %}
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'KuvaYleisesti1.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'KuvaYleisesti1.jpg' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'KuvaYleisesti2.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'KuvaYleisesti2.jpg ' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            <div class="col-sm-3 h4 mt-1 text-center p-2">
+              <a href="{% static 'KuvaYleisesti3.jpg' %}" class="p2 bg-success">
+                <img src="{% static 'KuvaYleisesti3.jpg ' %}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+                </a>
+            </div>
+            {% endif%}
+  </div>
+</div>
+</div>
+<div class="col-sm-2">
+</div>
+
+</div>
+
+
+
+
+
+<script>
+
+$(function() {
+ $('#Tietoapainike').click (function() {
+   $('html, body').animate({scrollTop: $('section.Tietoa').offset().top }, 'slow');
+   // Get Element
+   checkBox = document.getElementById('takenBefore');
+   // Set the `checked` field to `true`
+   checkBox.checked = false
+   return false;
+ });
+});
+
+
+</script>
+
+<style>
+
+
+.links{
+
+}
+
+#refrencefirst{
+  background-image: url("{% static "background1.jpg" %}");
+  font-size: 3.5rem;
+}
+
+#firstmiddle{
+  height:60rem;
+
+}
+
+@media screen and (max-width: 1200px) {
+  #secondmiddle {
+    font-size: 1.5rem;
+  }
+  #linksfordesktop{
+    display: none;
+  }
+  #linksformobile{
+    padding: 0; !important
+  }
+}
+@media screen and (min-width: 1200px) {
+  #linksformobile{
+    display:none;
+  }
+
+#thirdmiddle{
+
+  border-top: 2px solid gray;
+}
+
+#middlepicture{
+box-shadow: 0 8px 6px -6px black;
+  background-image: url("{% static "Rak1-min.png" %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55rem;
+}
+
+#middlepicture2{
+
+  background-image: url("{% static "Rak2.png" %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55rem;
+}
+
+#middlepicture3{
+
+  background-image: url("{% static "Rak3.png" %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55rem;
+}
+
+</style>
+
+
+{% endblock %}

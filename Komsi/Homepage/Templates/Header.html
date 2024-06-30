@@ -1,0 +1,772 @@
+{% load static %}
+
+
+
+<nav role="navigation"  style="background-color: #00000; height:70px;">
+  <div class="row" >
+  <div class="col-sm-1">
+    </div>
+  <div class="col-sm-2">
+
+
+    <div id="menuToggle">
+
+    <input type="checkbox" id="takenBefore"/>
+    <span style="background-color: yellow;"></span>
+    <span style="background-color: yellow;"></span>
+    <span style="background-color: yellow;"></span>
+
+    {% if English %}
+      <ul id="menu" style="background-color: #121212; !important">
+
+      <li>
+        <div class="dropdown">
+          <div class="col-sm-12 mt-4">
+            {% if Etusivu %}
+          <a class="col-sm-2 text-white h6" style= "text-decoration: none; border-left: 0.2vw solid Yellow;" href="/English"><b>Frontpage</b></a>
+            {% else %}
+          <a class="col-sm-2 text-white h6" style= "text-decoration: none; border-left: 2px solid gray;" href="/English"><b>Frontpage</b></a>
+          {% endif %}
+          </div>
+          <div class="col-sm-12 mt-4">
+            {% if Referenssit %}
+          <a class="col-sm-2 text-white h6" style="text-decoration: none; border-left: 0.2vw solid Yellow;" href="/ReferenssitEnglish">References</a>
+            {% else %}
+            <a class="col-sm-2 text-white h6" style="text-decoration: none; border-left: 2px solid gray;" href="/ReferenssitEnglish">References</a>
+          {% endif %}
+          </div>
+          <div class="col-sm-12 mt-4">
+            {% if Yhteydenotto %}
+          <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 0.2vw solid Yellow;" href="YhteydenottoEnglish">Contact</a>
+          {% else %}
+          <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 2px solid gray" href="YhteydenottoEnglish">Contact</a>
+          {% endif %}
+          </div>
+          <div class="col-sm-12 mt-4">
+            {% if Tyopaikat %}
+          <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 0.2vw solid Yellow;" href="/Tyopaikat">Työpaikat</a>
+          {% else %}
+          <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 2px solid gray" href="/Tyopaikat">Työpaikat</a>
+          {% endif %}
+          </div>
+          <div class="col-sm-12 mt-4">
+            {% if Tietoa %}
+          <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 0.2vw solid Yellow;" href="TietoaEnglish">Information</a>
+          {% else %}
+          <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 2px solid gray" href="TietoaEnglish">Information</a>
+          {% endif %}
+          </div>
+
+
+          <div class="col-sm-12 mt-5">
+            <label class="col-sm-2 text-white h6 otayhteytta" for="touch">Language <i class="fa-regular fa-square-caret-down"></i></label>
+            <input type="checkbox" id="touch">
+
+            <ul class="slide text-white">
+
+              {% if English %}
+              <li><a class="h6 text-white mt-3" href="/"><b>Suomi</b></a></li>
+              <li><a class="h6 text-white mt-2" style= "border-bottom: 0.3vw solid Yellow;"  href="/English">English</a></li>
+              {% else %}
+              <li><a class="h6 text-white mt-3" style= "border-bottom: 0.3vw solid Yellow;" href="/"><b>Suomi</b></a></li>
+              <li><a class="h6 text-white mt-2" href="/English">English</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+
+      </li>
+
+          </ul>
+
+          {% else %}
+          <ul id="menu" style="background-color: #121212; font-family: Helvetica,Arial,Verdana,sans-serif;" !important>
+
+          <li>
+            <div class="dropdown">
+              <div class="col-sm-12 mt-4">
+                {% if Etusivu %}
+              <a class="col-sm-2 text-white h6" style= "text-decoration: none; border-left: 0.2vw solid Yellow;" href="/"><b>Etusivu</b></a>
+                {% else %}
+              <a class="col-sm-2 text-white h6" style= "text-decoration: none; border-left: 2px solid gray;" href="/"><b>Etusivu</b></a>
+              {% endif %}
+              </div>
+
+
+              <div class="col-sm-12 mt-4">
+                {% if Referenssit %}
+              <a class="col-sm-2 text-white h6" style="text-decoration: none; border-left: 0.2vw solid Yellow;" href="/Referenssit">Referenssit</a>
+                {% else %}
+                <a class="col-sm-2 text-white h6" style="text-decoration: none; border-left: 2px solid gray;" href="/Referenssit">Referenssit</a>
+              {% endif %}
+              </div>
+              <div class="col-sm-12 mt-4">
+                {% if Yhteydenotto %}
+              <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 0.2vw solid Yellow;" href="Yhteydenotto">Yhteydenotto</a>
+              {% else %}
+              <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 2px solid gray" href="Yhteydenotto">Yhteydenotto</a>
+              {% endif %}
+              </div>
+
+              <div class="col-sm-12 mt-4">
+                {% if Tietoa %}
+              <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 0.2vw solid Yellow;" href="/Sahkopalvelut">Sähköpalvelut</a>
+              {% else %}
+              <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 2px solid gray" href="/Sahkopalvelut">Sähköpalvelut</a>
+              {% endif %}
+              </div>
+              <div class="col-sm-12 mt-4">
+                 {% if Ajankohtaista %}
+               <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 0.2vw solid Yellow;" href="/Ajankohtaista">Ajankohtaista</a>
+               {% else %}
+               <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 2px solid gray" href="/Ajankohtaista">Ajankohtaista</a>
+               {% endif %}
+               </div>
+               <div class="col-sm-12 mt-4">
+                 {% if Tyopaikat %}
+               <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 0.2vw solid Yellow;" href="/Tyopaikat">Työpaikat</a>
+               {% else %}
+               <a class="col-sm-2 text-white h6 otayhteytta" style="Text-decoration: none; border-left: 2px solid gray" href="/Tyopaikat">Työpaikat</a>
+               {% endif %}
+               </div>
+<!--              <div class="col-sm-12 mt-5">
+                <label class="col-sm-2 text-white h6 otayhteytta" for="touch">Language <i class="fa-regular fa-square-caret-down"></i></label>
+                <input type="checkbox" id="touch">
+
+                <ul class="slide text-white">
+
+                  {% if English %}
+                  <li><a class="h6 text-white mt-3" href="/"><b>Suomi</b></a></li>
+                  <li><a class="h6 text-white mt-2" style= "border-bottom: 0.3vw solid Yellow;"  href="/English">English</a></li>
+                  {% else %}
+                  <li><a class="h6 text-white mt-3" style= "border-bottom: 0.3vw solid Yellow;" href="/"><b>Suomi</b></a></li>
+                  <li><a class="h6 text-white mt-2" href="/English">English</a></li>
+                  {% endif %}
+                </ul>
+              </div>
+            </div> -->
+
+          </li>
+
+              </ul>
+          {% endif %}
+
+           </div>
+
+      <p class="text-white mt-1 h2 d-none d-sm-block"><img src="{% static 'RaksireLogo.png' %}" id="desktoplogo"></p>
+
+</div>
+
+<style>
+
+
+
+        .slide {
+          clear:both;
+          width:100%;
+          height:0px;
+          overflow: hidden;
+          text-align: center;
+          transition: height .4s ease;
+        }
+
+        .slide li {}
+
+        #touch {opacity: 0; }
+
+        #touch:checked + .slide {height: 300px;}
+
+
+</style>
+<!-- desktop -->
+<div class="col-sm-9 text-center mt-4 " style="font-family: Helvetica,Arial,Verdana,sans-serif;" id="linktext">
+
+  <div class="row">
+
+
+    <div class="col-sm-9">
+  <div class="row" id="textmiddle">
+
+    {% if English %}
+
+    {% if Etusivu %}
+    <a class="col-sm-2 text-white h6" style= " text-decoration: none; border-left: 0.2vw solid Yellow;" href="/"><b>Frontpage</b></a>
+    {% else %}
+    <a class="col-sm-2 text-white h6" style=" Text-decoration: none; border-left: 2px solid gray" href="/">Frontpage</a>
+    {% endif %}
+    {% if Ajankohtaista %}
+    <a class="col-sm-2 text-white h6" style= " text-decoration: none; border-left: 0.2vw solid Yellow;" href="/Ajankohtaista"><b>Ajankohtaista</b></a>
+    {% else %}
+    <a class="col-sm-2 text-white h6" style=" Text-decoration: none; border-left: 2px solid gray" href="/Ajankohtaista">Ajankohtaista</a>
+    {% endif %}
+    {% if Referenssit %}
+    <a class="col-sm-2 text-white h6" style=" text-decoration: none; border-left: 0.2vw solid Yellow;" href="/Referenssit"><b>References</b></a>
+    {% else %}
+    <a class="col-sm-2 text-white h6" style=" Text-decoration: none; border-left: 2px solid gray" href="/Referenssit">References</a>
+    {% endif %}
+    {% if Yhteydenotto %}
+    <a class="col-sm-2 text-white h6" style=" Text-decoration: none; border-left: 0.2vw solid Yellow;" href="Yhteydenotto">Contact</a>
+    {% else %}
+    <a class="col-sm-2 text-white h6" style=" Text-decoration: none; border-left: 2px solid gray" href="Yhteydenotto">Contact</a>
+    {% endif %}
+    {% if Tietoa %}
+    <a href="Tietoa" class="h6 col-sm-2 text-white" style="Text-decoration: none; border-left: 0.2vw solid Yellow">Information</a>
+    {% else %}
+    <a href="Tietoa" class="h6 col-sm-2 text-white" style="Text-decoration: none; border-left: 2px solid gray ">Information</a>
+    {% endif %}
+
+    {% else %}
+
+
+      {% if Etusivu %}
+      <a class="col-sm-2 text-white h6" style= " text-decoration: none; border-left: 0.2vw solid Yellow;" href="/"><b>Etusivu</b></a>
+      {% else %}
+      <a class="col-sm-2 text-white h6" style=" Text-decoration: none; border-left: 2px solid gray" href="/">Etusivu</a>
+      {% endif %}
+
+      {% if Referenssit %}
+      <a class="col-sm-2 text-white h6" style=" text-decoration: none; border-left: 0.2vw solid Yellow;" href="/Referenssit"><b>Referenssit</b></a>
+      {% else %}
+      <a class="col-sm-2 text-white h6" style=" Text-decoration: none; border-left: 2px solid gray" href="/Referenssit">Referenssit</a>
+      {% endif %}
+      {% if Yhteydenotto %}
+      <a class="col-sm-2 text-white h6" style=" Text-decoration: none; border-left: 0.2vw solid Yellow;" href="Yhteydenotto">Yhteydenotto</a>
+      {% else %}
+      <a class="col-sm-2 text-white h6" style=" Text-decoration: none; border-left: 2px solid gray" href="Yhteydenotto">Yhteydenotto</a>
+      {% endif %}
+      {% if Tietoa %}
+      <a class="col-sm-2 text-white h6" href="/Sahkopalvelut" class="h6 col-sm-2 text-white" style="Text-decoration: none; border-left: 0.2vw solid Yellow">Sähköpalvelut</a>
+      {% else %}
+      <a class="col-sm-2 text-white h6" href="/Sahkopalvelut" class="h6 col-sm-2 text-white" style="Text-decoration: none; border-left: 2px solid gray ">Sähköpalvelut</a>
+      {% endif %}
+      {% if Ajankohtaista %}
+      <a class="col-sm-2 text-white h6" style= " text-decoration: none; border-left: 0.2vw solid Yellow;" href="/Ajankohtaista"><b>Ajankohtaista</b></a>
+      {% else %}
+      <a class="col-sm-2 text-white h6" style=" Text-decoration: none; border-left: 2px solid gray" href="/Ajankohtaista">Ajankohtaista</a>
+      {% endif %}
+      {% if Tyopaikat %}
+      <a class="col-sm-2 text-white h6" href="/Tyopaikat" class="h6 col-sm-2 text-white" style="Text-decoration: none; border-left: 0.2vw solid Yellow">Työpaikat</a>
+      {% else %}
+      <a class="col-sm-2 text-white h6" href="/Tyopaikat" class="h6 col-sm-2 text-white" style="Text-decoration: none; border-left: 2px solid gray ">Työpaikat</a>
+      {% endif %}
+    {% endif %}
+
+</div>
+    <div class="col-sm-1 text-white h6" style="display:none;" id="languageshow">
+      <div class="row">
+        {% if English %}
+        <a href="/" class="col-sm-6 h6" >
+          Finnish
+        <a>
+        <a href="/English" class="col-sm-6 h6" style="border-bottom: solid 0.1rem yellow;">
+          English
+        </a>
+        {% else %}
+        <a href="/" class="col-sm-6 h6" style="border-bottom: solid 0.1rem yellow;">
+          Finnish
+        <a>
+        <a href="/English" class="col-sm-6 h6">
+          English
+        </a>
+        {% endif %}
+      </div>
+
+    <label class="col-sm-1 text-white h6 otayhteytta language" style="Text-decoration: none; border-left: 2px solid gray "  >Language <i class="fa-regular fa-square-caret-down"></i></label>
+    <input type="checkbox" id="touch2" style="border-left: 2px solid gray">
+
+    <ul class="slide2">
+
+      {% if English %}
+      <li><a class="h6 text-white mt-3" style="Text-decoration: none; border-bottom: 0px; border-left: 2px solid gray"><b>Suomi</b></a></li>
+      <li><a class="h6 text-white mt-2" style="Text-decoration: none; border-bottom: 0.3vw solid Yellow;">English</a></li>
+      {% else %}
+      <li><a class="h6 text-white mt-3" style="Text-decoration: none; border-bottom: 0.3vw solid Yellow; border-left: 2px solid gray"><b>Suomi</b></a></li>
+      <li><a class="h6 text-white mt-2" style="Text-decoration: none;">English</a></li>
+      {% endif %}
+    </ul>
+
+    </div>
+    <script>
+    $(".language").click(function(){
+      $("#languageshow").toggle();
+    });
+    </script>
+    </div>
+  </div>
+
+  </div>
+
+<style>
+
+  .slide2 {
+    clear:both;
+    width:100%;
+    height:0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+  }
+
+  .slide2 li {}
+
+  #touch2 {opacity: 0; }
+
+  #touch2:checked + .slide {height: 300px;}
+
+</style>
+
+</div>
+
+  <div class="col-sm-1 text-left" style="font-size:10px;">
+
+
+<!-- on phone -->
+      <div class="col-sm-12 d-block d-sm-none text-center">
+          <a href="/"><img src="{% static 'RaksireLogo.png' %}" style="width:5.3rem;"></a>
+
+        </div>
+      <!-- only on bigger screens, button to change language -->
+      <div class="col-sm-1 mt-3 d-none d-lg-block">
+
+        </div>
+
+      <div class="col-sm-2 d-none d-sm-block">
+
+      </div>
+
+
+  </div>
+
+
+  </div>
+
+    </nav>
+
+    <style>
+
+
+
+
+
+      .dropbtn {
+        background-color: gray;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropbtn:hover, .dropbtn:focus {
+        background-color: gray;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {background-color: #ddd;}
+
+      .show {display: block;}
+
+      {% load static %}
+
+      html {
+          width: 100%;
+          height: 100%;
+          display: table;
+          margin: 0;
+          padding: 0;
+
+        }
+      body {
+          background-color: #f9f9f9;
+          margin:0;
+          padding:0;
+          width:100%;
+          margin-top: 65px;
+          position:absolute !important;
+
+
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          opacity:1;
+          font-family: 'work sans', sans serif;
+          font-size: 1.5em;
+          font-weight: 400;
+          transition: 200ms;
+
+        }
+        a:hover {
+          opacity:0.5;
+          color: #fff;
+
+        }
+
+        ul {
+          padding: 0;
+          list-style-type: none;
+        }
+        nav {
+          background-color: #000000;
+          opacity:0.95;
+          height: 65px;
+          width:100%;
+          z-index: 1;
+          position: fixed;
+          top:0;
+        }
+
+
+        #menuToggle {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          top: 25px;
+          left: 25px;
+          z-index: 1;
+          -webkit-user-select: none;
+          user-select: none;
+          width:30px;
+        }
+
+        #menuToggle input
+        {
+          display: flex;
+          width: 40px;
+          height: 50px;
+          position: absolute;
+          cursor: pointer;
+          opacity: 0;
+          z-index: 2;
+        }
+
+        #menuToggle span
+        {
+          display: flex;
+          width: 35px;
+          height: 2px;
+          margin-bottom: 5px;
+          position: relative;
+          background: green;
+          border-radius: 3px;
+          z-index: 1;
+          transform-origin: 5px 0px;
+          transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                      background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                      opacity 0.55s ease;
+        }
+
+        #menuToggle span:first-child
+        {
+          transform-origin: 0% 0%;
+        }
+
+        #menuToggle span:nth-last-child(2)
+        {
+          transform-origin: 0% 100%;
+        }
+
+        #menuToggle input:checked ~ span
+        {
+          opacity: 1;
+          transform: rotate(45deg) translate(-3px, -1px);
+          background: green;
+
+        }
+        #menuToggle input:checked ~ span:nth-last-child(3)
+        {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        #menuToggle input:checked ~ span:nth-last-child(2)
+        {
+          transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        #menu
+        {
+          position: absolute;
+          width: 210px;
+          height: 800px;
+          box-shadow: 0 0 10px #85888C;
+          margin: -50px 0 0 -50px;
+          padding: 50px;
+          padding-top: 125px;
+          background-color: #121212;
+          -webkit-font-smoothing: antialiased;
+          transform-origin: 0% 0%;
+          transform: translate(-100%, 0);
+          transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        }
+
+        #menu li
+        {
+          padding: 10px 0;
+          transition-delay: 2s;
+        }
+
+        #menuToggle input:checked ~ ul
+        {
+          transform: none;
+        }
+
+
+        /* site container flex */
+        .container{
+          display: flex;
+          flex-direction: column;
+          min-height: 100%;
+          width:100%;
+        }
+
+        /* logo*/
+        .logo{
+          z-index: 2;
+          height:auto;
+          width: 40%;
+          padding-top:40px;
+        }
+        /* */
+        .mainbox{
+            z-index: 0;
+            width:75%;
+            height:400px;
+            margin-top: 40px;
+            background-color: rgb(226, 224, 221);
+            align-self: center;
+            box-shadow: 10px 10px 8px #888888;
+        }
+
+        /*top image */
+        .topimage{
+            display: flex;
+            top:0;
+            z-index:0;
+            width:100%;
+            height:1000px;
+              background: url("/static/wood.jpg");
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+        }
+
+
+
+        /* responsive for mobile */
+        @media screen and (max-width: 992px) {
+          .logo {
+              z-index: 2;
+              height:auto;
+              width: 75%;
+              padding-top:40px;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          .logo {
+              z-index: 2;
+              height:auto;
+              width: 40rem; !important
+              padding-top:40px;
+          }
+
+        }
+
+        @media screen and (max-width: 850px) {
+
+          #desktoplogo {
+            display: none;
+          }
+          #linktext {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 850px) {
+
+          #desktoplogo {
+            display: none;
+          }
+        }
+
+        /*scroll down */
+
+        *,
+      :after,
+      :before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+
+      .scroll-down {
+        opacity: 1;
+        -webkit-transition: all .5s ease-in 3s;
+        transition: all .5s ease-in 3s;
+      }
+
+      .scroll-down {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        margin-left: -16px;
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 2px solid #FFF;
+        background-size: 14px auto;
+        border-radius: 50%;
+        z-index: 2;
+        -webkit-animation: bounce 2s infinite 2s;
+        animation: bounce 2s infinite 2s;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+      }
+
+      .scroll-down:before {
+          position: absolute;
+          top: calc(50% - 8px);
+          left: calc(50% - 6px);
+          transform: rotate(-45deg);
+          display: block;
+          width: 12px;
+          height: 12px;
+          content: "";
+          border: 2px solid white;
+          border-width: 0px 0 2px 2px;
+      }
+
+      @keyframes bounce {
+        0%,
+        100%,
+        20%,
+        50%,
+        80% {
+          -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+          transform: translateY(0);
+        }
+        40% {
+          -webkit-transform: translateY(-10px);
+          -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+        }
+        60% {
+          -webkit-transform: translateY(-5px);
+          -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+        }
+      }
+
+      @media screen and (min-width: 850px) {
+        #menuToggle {
+          display: none; !important
+          }
+        #topNav {
+          height:4.5rem;
+        }
+        #desktoplogo{
+          max-width: 8rem;
+        }
+        #linktext{
+          font-size: 20px; !important
+        }
+
+        }
+
+
+        @media screen and (max-width: 550px) {
+          #topNav {
+            height:4.4rem;
+          }
+          #linktext{
+            display: none;
+          }
+
+          }
+
+
+      </style>
+
+
+
+      <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+<!-- scroll effect -->
+<script>
+//         var prevScrollpos = window.pageYOffset;
+//          window.onscroll = function() {
+//            var currentScrollPos = window.pageYOffset;
+
+//            if (prevScrollpos > currentScrollPos) {
+//                if(window.scrollY<50){
+//                  document.getElementById("topNav").style.backgroundColor = "rgba(0, 8, 1, 1.0)";
+//                  document.getElementById("topNav").style.transition = "background-Color 2.0s";
+//                }else{
+//                  document.getElementById("topNav").style.backgroundColor = "rgba(0, 8, 1, 0.9)";
+//                }
+//              document.getElementById("topNav").style.top = "0";
+
+//            }
+//              else{
+//              document.getElementById("topNav").style.top = "-65px";
+//            }
+//            prevScrollpos = currentScrollPos;
+//          }
+
+          // nää pitäis olla vaan mobilessa esillä eli avaa sen menun
+          function openNav() {
+              document.getElementById("myNav").style.width = "100%";
+          }
+
+          function closeNav() {
+              document.getElementById("myNav").style.width = "0%";
+          }
+</script>

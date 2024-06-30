@@ -1,0 +1,547 @@
+{% extends "Base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<Head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MNNGQ9KM');</script>
+<!-- End Google Tag Manager -->
+    <title>Tarjouspyyntö rakennuspalvelut ja sähköasennukset uudellamaalla - Raksire Oy</title>
+    <meta name="keywords" content="Tarouspyyntö, rakennuspalvelut, sähköasennukset, uudellamaalla">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</Head>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNNGQ9KM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVZV4SJT8D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GVZV4SJT8D');
+  gtag('config', 'AW-11171081614');
+
+
+</script>
+<!-- Event snippet for Yhteystiedot conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-11171081614/7NQzCPr0hMEYEI7b5M4p'});
+</script>
+  <!-- Event snippet for Yhteystieto conversion page -->
+<script> gtag('event', 'conversion', {'send_to': 'AW-11171081614/m9YOCMPeq70YEI7b5M4p'}); </script>
+
+{% if English %}
+<div class="col-sm-12 text-dark h2 p-2 text-center bg-white" id="refrencefirst">
+
+  <div class="col-sm-12 mt-4 h3 text-gray">Construction services Raksire Oy</div>
+  <div class="col-sm-12 h5 mt-4" style=" color: gray;">You can contact us with contactform
+
+  <div class="row mt-4 p-3" style="border-top: 1px solid gray;" id="contactdetails">
+    <div class="col-sm-1">
+    </div>
+  <div class="col-sm-4 mt-4 p-4 h6 text-left bg-dark" style=" opacity: 0.8; color: White; ">
+    <div class="col-sm-12 text-center h4"><b>Contact information</b></div><br><br>
+    Raksire Oy<br><br>
+    <div class="row mt-3">
+      <div class="col-sm-6">
+        <span class="material-symbols-outlined">
+home
+</span> Identity code
+      </div>
+      <div class="col-sm-6">
+        <a class="h6" href="https://tietopalvelu.ytj.fi/yritystiedot.aspx?yavain=3061549&tarkiste=6D4E28018E03D717E7197E7D1FB73F615956C964" style="color:gray; text-decoration-line: underline; ">3296352-2</a>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-6">
+        <span class="material-symbols-outlined">
+call
+</span> Phone
+      </div>
+      <div class="col-sm-6">
+        <a class="h6" href="tel:" style="color:gray; text-decoration-line: underline; "></a>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-6">
+        <span class="material-symbols-outlined">
+mail
+</span>
+        E-mail
+      </div>
+      <div class="col-sm-6">
+
+        <a class="h6" href="mailto:myynti@komsi.net" style="color:gray; text-decoration-line: underline; ">myynti@komsi.net</a>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-6">
+        <span class="material-symbols-outlined">
+contact_phone
+</span> Address
+      </div>
+      <div class="col-sm-6">
+        <a class="h6" href="https://www.google.com/maps/place/Ilvesvuorenkatu+22,+01940+Nurmij%C3%A4rvi/@60.4416639,24.8332914,17z/data=!3m1!4b1!4m5!3m4!1s0x468dfcf0b957693f:0x4bf0a05899e4cf2e!8m2!3d60.4416639!4d24.8354801?hl=fi" style="color:gray; text-decoration-line: underline; ">
+<br>
+
+        </a>
+
+      </div>
+    </div>
+     <br>
+     <br>
+
+
+    <p class="mt-2 text-center">You can contact us on workdays and weekends</p>
+    </div>
+    <div class="col-sm-1">
+      </div>
+
+    <div class="col-sm-5 mt-4 p-5 h6 bg-dark text-dark">
+      <div class="col-sm-12 mt-2 text-center h5"><b>Contact <span class="material-symbols-outlined">
+contact_mail
+</span></b></div>
+
+      <form action="Sendcontactform" class="text-center mt-5" method="post">
+
+          {% csrf_token %}
+
+          <div class="row">
+            <div class="col-sm-6">
+              Firstname
+            </div>
+            <div class="col-sm-6 mt-2">
+              {{ TheForm.firstname }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-6">
+              Lastname
+            </div>
+            <div class="col-sm-6 mt-2">
+              {{ TheForm.lastname }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-6">
+              E-mail
+            </div>
+            <div class="col-sm-6 mt-2">
+              {{ TheForm.sender }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-6">
+              Phone
+            </div>
+            <div class="col-sm-6 mt-2">
+              {{ TheForm.phone }}
+            </div>
+          </div>
+
+
+
+
+
+<div class="col-sm-12 text-center mt-5">
+  Write message<br><br>{{ TheForm.message }}
+<input class="btn-lg border mt-1 opacity-50 mt-2" type="submit" value="Send">
+</div>
+</form>
+    </div>
+
+  </div>
+
+
+
+  </div>
+
+</div>
+
+{% else %}
+<div class="col-sm-12 text-dark h2 p-2 text-center bg-white" id="refrencefirst">
+
+  {% if English %}
+  <div class="col-sm-12 mt-4 h3">Contact us</div>
+    <a href="Yhteydenotto" class="h5" style="color: black;">Contact us for free cost estimate</a>
+  </div>
+  {% else %}
+  <div class="col-sm-12" style="height:400px;">
+  <div class="col-sm-12" style="margin-top:250px; height:80px; color: white; font-size: 45px;">Ota yhteyttä
+  </div>
+  <div class="col-sm-12 h5 mt-4" style="color: white;">Yrityksen yhteystiedot ja yhteydenottolomake<br><br>
+
+  </div>
+  </div>
+  {% endif %}
+
+  <div class="row bg-white">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-12 text-left" style="font-size: 25px;">
+      <div class="col-sm-12 mt-5">Henkilökunta</div>
+      <div class="row mt-4">
+        <div class="col-sm-2"></div>
+
+
+        <div class="col-sm-3 text-center mt-4 border p-4">
+          <div class="col-sm-12">
+            <img src="{% static 'Niko.jpg'' %}" alt="Noora Sirén" style="width: 100%; max-width: 200px; border-radius: 20%;">
+          </div>
+          <div class="col-sm-12 text-center mt-2" style="font-size: 20px;">Niko Sirén</div>
+          <div class="col-sm-12 text-center" style="font-size: 17px;">
+            <b>Toimitusjohtaja</b><br>
+            <a class="text-dark" style="font-size: 20px;" href="tel:0458058685">0407240999</a><br>
+            <a class="text-dark" style="font-size: 20px;" href="mailto:niko.siren@raksire.fi">niko.siren@raksire.fi</a><br>
+            <div class="col-sm-12" style="font-size: 11px;">
+              Sähköurakointi/Rakennusurakointi<br>Myynti/Sopimukset</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-3 text-center mt-4 border p-4">
+          <div class="col-sm-12">
+            <img src="{% static 'Rakennuspalvelut_noora.jpg' %}" alt="Noora Sirén" style="width: 100%; max-width: 200px; border-radius: 20%;">
+          </div>
+          <div class="col-sm-12 text-center mt-2" style="font-size: 20px;">Noora Sirén</div>
+          <div class="col-sm-12 text-center" style="font-size: 17px;">
+            <b>Projektipäällikkö</b><br>
+            <a class="text-dark" style="font-size: 20px;" href="tel:0458058685">0458058685</a><br>
+            <a class="text-dark" style="font-size: 20px;" href="mailto:noora.siren@raksire.fi">noora.siren@raksire.fi</a><br>
+            <div class="col-sm-12" style="font-size: 11px;">
+              Myynti/Projektit/Työnjohto/Hallinto
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 text-center mt-4 border p-4">
+          <div class="col-sm-12">
+            <img src="{% static 'White.jpg' %}" alt="Miika Kuoksa" style="width: 100%; max-width: 200px; border-radius: 20%;">
+          </div>
+          <div class="col-sm-12 text-center mt-2" style="font-size: 20px;">Miika Kuoksa</div>
+          <div class="col-sm-12 text-center" style="font-size: 17px;">
+            <b>Työnjohtaja sähköurakointi</b><br>
+            <a class="text-dark" style="font-size: 20px;" href="mailto:miika.kuoksa@raksire.fi">miika.kuoksa@raksire.fi</a><br>
+            <div class="col-sm-12" style="font-size: 11px;">
+              Sähköurakointi/Työnjohto
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3 text-center mt-4 border p-4">
+          <div class="col-sm-12">
+            <img src="{% static 'Jenna_Rakennuspalvelut.jpg' %}" alt="Jenna Heinonen" style="width: 100%; max-width: 200px; border-radius: 20%;">
+          </div>
+
+          <div class="col-sm-12 text-center mt-2" style="font-size: 20px;">Jenna Heinonen</div>
+          <div class="col-sm-12 text-center" style="font-size: 17px;">
+            <b>Taloushallinto</b><br>
+            <a class="text-dark" style="font-size: 20px;" href="tel:0401834406">0401834406</a><br>
+            <a class="text-dark" style="font-size: 20px;" href="mailto:jenna.heinonen@raksire.fi">jenna.heinonen@raksire.fi</a><br>
+            <div class="col-sm-12" style="font-size: 11px;">
+              Laskutus ja reskontra
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 mt-5 p-4">Muita yhteystietoja</div>
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3 text-center mt-3 border p-4">
+          <div class="col-sm-12 text-center" style="font-size: 20px;">Laskutus</div>
+          <div class="col-sm-12 text-center" style="font-size: 17px;">
+            <br>
+            <a class="text-dark" style="font-size: 20px;" href="tel:0458058685">0458058685</a><br>
+            <a class="text-dark" style="font-size: 20px;" href="mailto:raksire@raksire.fi">raksire@raksire.fi</a><br>
+          </div>
+        </div>
+        <div class="col-sm-3 text-center mt-3 border p-4" style="margin-bottom: 30px;">
+          <div class="col-sm-12 text-center" style="font-size: 20px;">Rekry</div>
+          <div class="col-sm-12 text-center" style="font-size: 17px;">
+            <br>
+            <a class="text-dark" style="font-size: 20px;" href="mailto:rekry@raksire.fi">raksire@raksire.fi</a><br>
+          </div>
+        </div>
+        <div class="col-sm-3 text-center mt-3 border p-4" style="margin-bottom: 30px;">
+          <div class="col-sm-12 text-center" style="font-size: 20px;">Markkinointi</div>
+          <div class="col-sm-12 text-center" style="font-size: 17px;">
+            <b>LaNach</b><br>
+            <a class="text-dark" style="font-size: 20px;" href="tel:0503087183">0503087183</a><br>
+            <a class="text-dark" style="font-size: 20px;" href="mailto:niklas.pettersson@lanach.fi">niklas.pettersson@lanach.fi</a><br>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4 p-3" style="border-top: 1px solid gray;" id="contactdetails">
+    <div class="col-sm-1">
+    </div>
+  <div class="col-sm-4 mt-4 p-4 h6 text-left bg-dark" style=" opacity: 0.8; color: White; ">
+    <div class="col-sm-12 text-center h4"><b>Yhteystiedot</b></div><br><br>
+    Raksire Oy<br><br>
+    <div class="row mt-3">
+      <div class="col-sm-6">
+        <span class="material-symbols-outlined">
+home
+</span> Y-tunnus
+      </div>
+      <div class="col-sm-6">
+        <a class="h6" href="https://tietopalvelu.ytj.fi/yritystiedot.aspx?yavain=3061549&tarkiste=6D4E28018E03D717E7197E7D1FB73F615956C964" style="color:gray; text-decoration-line: underline; ">3296352-2</a>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-6">
+        <span class="material-symbols-outlined">
+call
+</span> Puhelinnumero
+      </div>
+      <div class="col-sm-6">
+        <a class="h6" href="tel:+358458058685" style="color:gray; text-decoration-line: underline; ">+358458058685</a>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-6">
+        <span class="material-symbols-outlined">
+mail
+</span>
+        Sähköposti
+      </div>
+      <div class="col-sm-6">
+
+        <a class="h6" href="mailto:raksire@raksire.fi" style="color:gray; text-decoration-line: underline; ">raksire@raksire.fi</a>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-6">
+        <span class="material-symbols-outlined">
+contact_phone
+</span> Osoite
+      </div>
+      <div class="col-sm-6">
+        <a class="h6" href="https://www.google.com/maps/place/Ilvesvuorenkatu+22,+01940+Nurmij%C3%A4rvi/@60.4416639,24.8332914,17z/data=!3m1!4b1!4m5!3m4!1s0x468dfcf0b957693f:0x4bf0a05899e4cf2e!8m2!3d60.4416639!4d24.8354801?hl=fi" style="color:gray; text-decoration-line: underline; ">
+          Vetokuja 4<br>
+          01610 Vantaa
+        </a>
+
+      </div>
+    </div>
+     <br>
+     <br>
+
+
+    <p class="mt-2 text-center">Meidät tavoittaa puhelimitse arkisin ja viikonloppuisin.</p>
+    </div>
+    <div class="col-sm-1">
+      </div>
+
+    <div class="col-sm-5 mt-4 p-5 h6 bg-white text-dark">
+      <div class="col-sm-12 mt-2 text-center h5"><b>Yhteydenotto <span class="material-symbols-outlined">
+contact_mail
+</span></b></div>
+
+      <form action="Sendcontactform" class="text-left mt-5" method="post">
+
+          {% csrf_token %}
+
+          <div class="row">
+            <div class="col-sm-6">
+              Etunimi
+            </div>
+            <div class="col-sm-6 mt-2">
+              {{ TheForm.firstname }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-6">
+              Sukunimi
+            </div>
+            <div class="col-sm-6 mt-2">
+              {{ TheForm.lastname }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-6">
+              Sähköposti
+            </div>
+            <div class="col-sm-6 mt-2">
+              {{ TheForm.sender }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-6">
+              Puhelinnumero
+            </div>
+            <div class="col-sm-6 mt-2">
+              {{ TheForm.phone }}
+            </div>
+          </div>
+
+
+
+
+
+
+<p class="mt-5"> Kirjoita viesti<br><br></p>{{ TheForm.message }}
+<input class="btn-lg border mt-1 opacity-50 mt-2" type="submit" value="Lähetä">
+
+</form>
+    </div>
+
+  </div>
+
+
+
+  </div>
+
+</div>
+{% endif %}
+
+
+
+
+
+<script>
+
+$(function() {
+ $('#Tietoapainike').click (function() {
+   $('html, body').animate({scrollTop: $('section.Tietoa').offset().top }, 'slow');
+   // Get Element
+   checkBox = document.getElementById('takenBefore');
+   // Set the `checked` field to `true`
+   checkBox.checked = false
+   return false;
+ });
+});
+
+</script>
+
+<style>
+
+#refrencefirst{
+  background-image: url("{% static "background1.jpg" %}");
+  font-size: 3.5rem;
+}
+
+#firstmiddle{
+  height:60rem;
+
+}
+
+@media screen and (max-width: 1200px) {
+  #secondmiddle {
+    font-size: 1.5rem;
+  }
+}
+
+#thirdmiddle{
+
+  border-top: 2px solid gray;
+}
+
+#contactdetails{
+
+  background-image: url("{% static "Sähköasennus3.JPG" %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#middlepicture{
+box-shadow: 0 8px 6px -6px black;
+  background-image: url("{% static "Rak1-min.png" %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55rem;
+}
+
+#middlepicture2{
+
+  background-image: url("{% static "Rak2.png" %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55rem;
+}
+
+#middlepicture3{
+
+  background-image: url("{% static "Rak3.png" %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55rem;
+}
+
+#id_firstname {
+    width: 100%;
+    height: 30px;
+    border-top: 2px solid #00000;
+    border-left: 2px solid #00000;
+    border-right: 2px solid #00000;
+    border-bottom: 2px solid #00000;
+    border-radius: 7px;
+}
+
+#id_lastname {
+    width: 100%;
+    height: 30px;
+    border-top: 2px solid #00000;
+    border-left: 2px solid #00000;
+    border-right: 2px solid #00000;
+    border-bottom: 2px solid #00000;
+    border-radius: 7px;
+}
+
+#id_sender {
+    width: 100%;
+    height: 30px;
+    border-top: 2px solid #00000;
+    border-left: 2px solid #00000;
+    border-right: 2px solid #00000;
+    border-bottom: 2px solid #00000;
+    border-radius: 7px;
+}
+
+#id_phone {
+    width: 100%;
+    height: 30px;
+    border-top: 2px solid #00000;
+    border-left: 2px solid #00000;
+    border-right: 2px solid #00000;
+    border-bottom: 2px solid #00000;
+    border-radius: 7px;
+}
+
+#id_message {
+    border-top: 2px solid #00000;
+    border-left: 2px solid #00000;
+    border-right: 2px solid #00000;
+    border-bottom: 2px solid #00000;
+    border-radius: 7px;
+    width: 100%;
+    background-color: #E6E6E3;
+}
+
+    #id_message input {
+        display: block;
+    }
+
+    #refrencefirst{
+      background-image: url("{% static "background1.jpg" %}");
+      font-size: 3.5rem;
+    }
+
+</style>
+
+
+{% endblock %}

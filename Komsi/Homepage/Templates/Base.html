@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+{% load static %}
+{% load bootstrap5 %}
+
+<html lang="en" dir="ltr">
+
+<Head>
+
+
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="7258ad5f-6bf0-4ac5-a0c3-ad570a6dcfb5" data-blockingmode="auto" type="text/javascript"></script>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Author -->
+    <meta name="author" content="Raksire Oy">
+    <!-- bootstrap -->
+      <link rel="stylesheet" type="text/css" href="{% static "Bootstrap16.04.css" %}">
+    <!--Normal css file-->
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<link rel="shortcut icon" href="{% static 'RaksireLogo-min.png' %}" type="image/x-icon">
+
+    <!-- script for header -->
+    <script src="{% static 'menu.js' %}"></script>
+
+    <!-- jquery -->
+
+     <script src="https://code.jquery.com/jquery-3.4.0.min.js" crossorigin="anonymous"></script>
+
+
+<script src="https://kit.fontawesome.com/cf05c34779.js" crossorigin="anonymous"></script>
+
+
+</Head>
+
+
+
+<html>
+
+<!--menu-->
+
+<body style="background-color: #000000; ">
+
+{% include "Header.html" %}
+
+<div class="container-fluid" style="background-color: #121212">
+<!-- <div class="container" style="background-color: #121212"> -->
+
+
+<!--here comes the data from other pages -->
+  	{% block content %}{% endblock %}
+
+{% include "Footer.html" %}
+
+</div>
+
+
+
+</body>
+
+<style>
+.container-fluid{
+  overflow: hidden; !important
+}
+</style>
+</html>

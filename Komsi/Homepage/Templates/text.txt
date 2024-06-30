@@ -1,0 +1,13 @@
+<!-- for database
+{% for thepicture in Gallery %}
+  <div class="col-sm-3 p-4 h4">
+    <a href="{{ thepicture.picture.url }}" class="col-sm-12 bg-success p-1">
+      <img src="{{ thepicture.picture.url }}" style="width:100%; object-fit: cover; border-radius:10px; border-width:thin;">
+      </a>
+  <div class="col-sm-12 h6 mt-1">
+    {{ thepicture.date }}<br>
+    {{ thepicture.text }}
+  </div>
+  </div>
+{% endfor %}
+-->

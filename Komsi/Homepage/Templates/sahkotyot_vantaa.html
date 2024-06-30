@@ -1,0 +1,287 @@
+{% extends "Base.html" %}
+{% load embed_video_tags %}
+{% load static %}
+
+{% block content %}
+
+
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MNNGQ9KM');</script>
+<!-- End Google Tag Manager -->
+    <title>Raksire Oy - Sähkötyöt Vantaa - Luotettava valinta Sähkötarpeellesi</title>
+    <meta name="description" content="Laadukkaat sähköpalvelut ammattitaidolla. Ota yhteyttä asiantuntijoihimme ja suunnitellaan yhdessä juuri sinun tarpeisiisi sopiva ratkaisu.">
+    <!-- hakusanat -->
+    <meta name="keywords" content="Sähkötyöt vantaa, Sähköurakointi Vantaalla, Sähkötyöt">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVZV4SJT8D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GVZV4SJT8D');
+  gtag('config', 'AW-11171081614');
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNNGQ9KM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="col-sm-12 text-dark">
+<div class="background-carousel" style="overflow: hidden; height: calc(100vh); margin: 0 -20px; background-size: cover; background-image: url('{% static 'Sähköasennus.JPG' %}')">
+    <img src="{% static 'Sähköasennus.JPG' %}" alt="Background Image" class="background-image">
+    <img src="{% static 'Sähköasennus2.JPG' %}" alt="Background Image" class="background-image">
+    <img src="{% static 'Sähköasennus6.JPG' %}" alt="Background Image" class="background-image">
+    <div class="overlay-text">
+      <h1 class="text-white">Sähkötyöt vantaalla - Raksire Oy</h1>
+      <h5 class="text-white mt-5">Laadukkaat sähköpalvelut ammattitaidolla. Ota yhteyttä asiantuntijoihimme ja suunnitellaan yhdessä juuri sinun tarpeisiisi sopiva ratkaisu.</h5>
+      <div class="row">
+        <div class="col-sm-6">
+          <a href="mailto:raksire@raksire.fi" class="btn btn-warning mt-3" id="ilmanenkustsahkopalvelut" style="width:100%;">Ilmainen kustannusarvio</a>
+        </div>
+        <div class="col-sm-6 hidedesktop">
+          <a href="tel:+358407240999" class="btn btn-warning mt-3" id="soitasahkopalvelut" style="width:100%;">Soita painamalla tästä</a>
+        </div>
+        <div class="col-sm-6 hidemobile">
+          <a href="mailto:raksire@raksire.fi" id="sahkopostisahkopalvelut" class="btn btn-warning mt-3" style="width:100%;">Lähetä sähköposti raksire@raksire.fi</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+@media (min-width: 577px) {
+   .hidedesktop {
+     display: none;
+   }
+ }
+   @media (max-width: 577px) {
+      .hidemobile {
+        display: none;
+      }
+    }
+.overlay-text {
+    position: absolute;
+    top: 35%; /* Adjust the top value to move the text down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    padding: 2px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-size: 2rem; /* Increase the font size for desktops */
+  }
+
+  .background-carousel {
+    width: calc(100vw + 30px); /* Huomaa, että tässä on lisätty 30px marginaaleja varten */
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+  }
+
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: -15px; /* Huomaa, että tässä on lisätty -15px marginaaleja varten */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .background-image.active {
+    opacity: 1;
+  }
+
+  @keyframes rotateImages {
+    0%, 100% {
+      opacity: 0;
+    }
+    20%, 80% {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .overlay-text {
+      top: 40%; /* Säädä tarvittaessa mobiililaitteille sopivaksi */
+      font-size: 1.5rem; /* Säädä tarvittaessa mobiililaitteille sopivaksi */
+    }
+  }
+</style>
+
+<script>
+  let images = document.querySelectorAll('.background-image');
+  let index = 0;
+
+  function rotateImages() {
+    images[index].classList.remove('active');
+    index = (index + 1) % images.length;
+    images[index].classList.add('active');
+  }
+
+  setTimeout(() => {
+    rotateImages(); // Rotate images immediately after 1 second
+    setInterval(rotateImages, 2000); // Rotate images every 2 seconds
+  }, 1000); // Wait for 1 second before starting the rotation
+</script>
+
+
+  <div class="row bg-white" style="border-top: 3px solid #fcd806;">
+
+
+    <div class="col-sm-12" style="background-color: #000; padding: 50px 0; text-align: center; font-family: 'Arial', sans-serif;">
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <div class="h5 p-3" style="line-height: 30px; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 10px;">
+            <h2 style="color: #fcd806; font-size: 28px; margin-bottom: 10px; font-weight: bold;">Ammattitaitoiset <span style="color: #ffcc00;">Sähkötyöt</span> vantaalla</h2>
+            <p class="mt-4" style="font-size: 16px;">Etsitkö <span style="font-weight: bold; color: #ffcc00;">luotettavaa ja ammattitaitoista sähköurakoitsijaa</span> Vantaalla? Tervetuloa Raksire Oy:n sähkötyöpalveluihin Vantaalla! Tarjoamme laadukkaita sähköpalveluita ammattitaidolla. Kun valitset meidät, valitset luotettavan kumppanin sähkötarpeidesi ratkaisemiseen.</p>
+            <p class="mb-4" style="font-size: 16px;">Olemme ylpeitä siitä, että voimme palvella asiakkaitamme monipuolisesti eri paikkakunnilla. Olipa kyseessä <span style="font-weight: bold; color: #ffcc00;">sähköasennukset, huollot, korjaukset tai suuremmat sähköprojektit</span>, tiimimme on valmis tarttumaan toimeen.</p>
+            <div class="row">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-6">
+                <a href="Yhteydenotto" id="otayteyttasahkopalvelut" class="btn btn-md text-dark" style="background-color: #fcd806; width: 100%; font-size: 16px;">Ota yhteyttä</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+    </div>
+
+
+
+
+    <script>
+    $(window).scroll(function() {
+      $('.fade-in-element').each(function() {
+        var position = $(this).offset().top;
+        var scrollPosition = $(window).scrollTop();
+
+        if (position < scrollPosition + $(window).height()) {
+          $(this).addClass('fade-in');
+        }
+      });
+    });
+    </script>
+
+    <style>
+    .fade-in-element {
+      opacity: 0 !important;
+      animation: fadeIn 1s ease-in-out !important;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Other styles */
+    /* ... */
+    </style>
+    <div class="col-sm-2" style="background-color:#292826;">
+    </div>
+
+    <div class="col-sm-12 text-center mt-4" id="linksfordesktop">
+      <div class="row mb-5">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8" style="font-size: 0.8rem; font-family:  faricy-new-web,Arial,sans-serif; color: #292940; font-weight: 400; line-height: 25px;">
+          <div class="row">
+
+            <div class="col-sm-6 mt-5 text-left h5" style="color: black;">
+              <a class="links" href="mailto:raksire@raksire.fi" style="color: black;"><b>Ammattitaitoiset sähkötyöt vantaalla</b></a><br><br>
+              <p>Tervetuloa Raksire Oy:n sähkötyöpalveluihin Vantaalla! Tarjoamme laadukkaita sähköpalveluita ammattitaidolla. Kun valitset meidät, valitset luotettavan kumppanin sähkötarpeidesi ratkaisemiseen.</p>
+              <p>Haluamme olla mukana tukemassa paikallisia yhteisöjä ja yrityksiä tarjoamalla <b>laadukkaita sähköpalveluita</b> aina sopivasti. Oli tarpeesi sitten suunnitella uuden kiinteistön sähköjärjestelmät, korjata sähköviat tai modernisoida vanhat sähköasennukset, olemme valmiina auttamaan.</p>
+              <p>Ota meihin yhteyttä ja kerro tarpeistasi – oli sijaintisi sitten missä tahansa Uudellamaalla tai muualla. Teemme yhteistyötä sinun aikataulusi ja tarpeidesi mukaan. Yhdessä teemme <b>sähköisestä tulevaisuudestasi turvallisen ja luotettavan</b>.</p>
+              <p><b>Tervetuloa tutustumaan palveluihimme ja ottamaan yhteyttä</b>!</p>
+            </div>
+            <div class="col-sm-6 mt-5">
+              {% for video_item in video %}
+                <div class="responsive-video">
+                  <!-- Use the url property to embed the video -->
+                  {% video video_item.video as my_video %}
+                    {% video my_video 'tiny' %}
+                  {% endvideo %}
+                </div>
+              {% endfor %}
+            </div>
+
+
+
+          </div>
+
+        </div>
+      <div class="col-sm-2">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+
+$(function() {
+ $('#Tietoapainike').click (function() {
+   $('html, body').animate({scrollTop: $('section.Tietoa').offset().top }, 'slow');
+   // Get Element
+   checkBox = document.getElementById('takenBefore');
+   // Set the `checked` field to `true`
+   checkBox.checked = false
+   return false;
+ });
+});
+
+
+</script>
+<style>
+
+.responsive-video {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio, adjust as needed */
+  width: 100%;
+  margin-bottom: 20px; /* Add some margin at the bottom for spacing */
+}
+
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 576px) {
+  .responsive-video {
+    padding-bottom: 60%; /* Adjust this value to increase the height */
+  }
+}
+
+</style>
+
+{% endblock %}

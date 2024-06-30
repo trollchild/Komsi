@@ -1,0 +1,300 @@
+{% extends "Base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<Head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MNNGQ9KM');</script>
+<!-- End Google Tag Manager -->
+    <title>Raksire - Tietoa yrityksen rakennuspalveluista</title>
+    <!-- keywords -->
+    <meta name="keywords" content="Raksire, rakennuspalvelu, tietoa, yrityksestä">
+</Head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVZV4SJT8D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GVZV4SJT8D');
+  gtag('config', 'AW-11171081614');
+</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNNGQ9KM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="col-sm-12 text-dark h2 p-2 text-center bg-white" id="refrencefirst">
+
+  {% if English %}
+  <div class="col-sm-12 mt-4 h3">Information</div>
+  <div class="col-sm-12 h5 mt-4" style="color: gray;">Below you can find information about Raksire Oy and contact informations<br><br>
+  </div>
+  {% else %}
+  <div class="col-sm-12" style="height:400px;">
+  <div class="col-sm-12" style="margin-top:250px; height:80px; color: white;">Tietoa
+  </div>
+  <div class="col-sm-12 h5 mt-4" style="color: white;">Tietoa yrityksestä<br><br>
+
+  </div>
+  </div>
+  {% endif %}
+</div>
+<div class="col-sm-12 mt-4"">
+  {%if English %}
+  <div class="row">
+    <div class="col-sm-6">
+    </div>
+    <div class="col-sm-3 bg-dark text-center text-white p-4 ">
+      <div class="col-sm-12 text-center">
+        <img src="{% static 'RaksireLogo.png' %}" id="raksirelogo">
+      </div>
+      <p class="h5 mt-3 teksti_tietoa">Raksire Oy is mainly working in Nurmijärvellä with construction, renovating, painting and electrical contract work.</p>
+      <div class="col-sm-12" id="projektit">
+      <a class="btn btn-lg btn-dark bg-white mt-4" href="/ReferenssitEnglish" class="h6 mt-6 text-white " style="color: black;">Previous projects</a>
+      </div>
+      <div class="col-sm-12" id="projektit2">
+      <a class="btn btn-sm btn-dark bg-white mt-4" href="/ReferenssitEnglish" class="h6 mt-6 text-white " style="color: black;">Previous projects</a>
+      </div>
+    </div>
+    <div class="col-sm-4" id="">
+      <img class="mt-2" src="{% static 'Rivitalo remontti.jpeg' %}"; style="width:100%;"></img>
+      </div>
+  </div>
+  {% else %}
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4 text-center text-white ">
+      <div class="col-sm-12 text-center mt-5">
+        <img src="{% static 'RaksireLogo.png' %}" id="raksirelogo">
+      </div>
+      <p class="h5 mt-3 teksti_tietoa">Raksire Oy on Nurmijärvellä sijaitseva rakennus-, saneeraus-, maalaus- ja sähköurakointi yritys.</p>
+      <div class="col-sm-12" id="projektit">
+      <a class="btn btn-lg btn-dark bg-white mt-4" href="Referenssit" class="h6 mt-6 text-white " style="color: black;">Aikaisemmat projektit</a>
+      </div>
+      <div class="col-sm-12" id="projektit2">
+      <a class="btn btn-sm btn-dark bg-white mt-4" href="Referenssit" class="h6 mt-6 text-white " style="color: black;">Aikaisemmat projektit</a>
+      </div>
+    </div>
+    <div class="col-sm-4 mt-2" id="">
+      <img class="mt-2" src="{% static 'Rivitalo remontti.jpeg' %}"; style="width:100%;"></img>
+      </div>
+      <div class="col-sm-2">
+      </div>
+  </div>
+  {% endif %}
+
+
+
+
+  <div class="row mt-4" style="border-top: 1px solid gray; background-color: #FFFDFA;">
+
+    <section class="Tietoa">
+    <div class="col-sm-12 text-dark h2 p-1 text-left bg-white" id="thirdmiddle">
+      <div class="row">
+        <div class="col-sm-3">
+          </div>
+        <div class="col-sm-6">
+      <p class="mt-4 p2 h5 text-center" style="font-family:  faricy-new-web,Arial,sans-serif; color: black; font-weight: 400; font-size:17px; line-height: 34px;">
+        {% if English %}
+        ABOUT US<br><br>
+        {% else %}
+        <b>TIETOA MEISTÄ</b><br><br>
+        {% endif %}
+        </p>
+        <p  class="col-sm-12 h6 p-2">
+          {% if English %}
+          Raksire Oy is a company focused on construction, renovating, painting and electrical contract work. It has been established in 2022 in Nurmijärvi, Finland.
+    We work mainly in Uusimaa area but can separately agree other areas as well. We want to serve all our customers reliably with quality.<br>
+    We are cooperating widely with big construction companies and housing cooperatives.<br><br>
+    Our operations include:<br><br>
+    Repair construction and modifications<br>
+    industrial building services,<br>
+    bathroom and apartment renovations,<br>
+    terraces and houses across the yard,<br>
+    façade and interior renovations,<br>
+    ceiling and painting work,<br>
+    electrical contract work<br><br>
+
+    Our company is also part of Finnish contractor liability’s Reliable  Partner service.<br><br>
+
+    We employ our own staff as well as cooperate with many reliable subcontractor.<br><br>
+    We are cooperating with many  design professionals. We will fine tune the plan carefully before the project starts. Well planned is half done!
+    We focus on caution and quality in every stage of the project. We only use professionals with many years’ experience from construction projects.
+    Our management is working closely from the beginning of the project until the end.<br><br>
+
+    Our main goal is a happy customer, who would recommend us to their friends and acquaintances!<br><br>
+
+    High-class, comprehensive construction and renovation services with years’ experience  for households as well as B2B in Uusimaa area.<br><br>
+    Contact for more information!
+
+          {% else %}
+          Raksire Oy on vuonna 2022 perustettu, Nurmijärvellä sijaitseva rakennus-, saneeraus-, maalaus- ja sähköurakointi yritys.<br><br>
+
+          Toimimme pääasiassa Uudenmaan alueella, mutta sovitusti teemme töitä koko Suomen alueella. Haluamme palvella kaikkia asiakkaita luotettavasti sekä laadukkaalla työllä. <br><br>
+
+          Teemme paljon yhteistyötä isojen rakennusalan-, yritysten-, taloyhtiöiden- ja yksityishenkilöiden kanssa. <br><br>
+
+          Toimenkuvaamme kuuluu mm. Korjausrakentaminen ja muutostyöt, teollisuuden rakennuspalvelut, kylpyhuone- ja huoneistoremontit sekä piharakennuksien ja terassien rakentaminen. Julkisivu- ja sisätilasaneeraukset. Katto- ja maalaustyöt. Sekä sähköurakointi. <br><br>
+
+          Yrityksemme on mukana myös Suomen tilaajavastuun Luotettava Kumppani-palvelussa.<br><br>
+
+          Työllistämme omaa henkilökuntaa sekä teemme yhteistyötä monen luotettavan aliurakoitsijan kanssa.<br><br><br>
+
+          Teemme yhteistyötä monen suunnittelu alan ammattilaisen kanssa. Pystymme hiomaan suunnitelmat viimeisen päälle kuntoon, ennen kuin lähdemme aloittamaan projektia. Hyvän suunnittelu osaamisemme ansiosta
+          rakentaminen on helppoa, kun suunnitelmat on tehty alusta asti huolellisesti.<br><br>
+          Rakentamisen jokaisessa vaiheessa keskitymme huolellisuuteen sekä laadukkaaseen työhön. Käytämme vain alan ammattilaisia joilla kokemusta vuosia erilaisista rakennus projekteista. Meidän työnjohto on alusta lähtien mukana tiiviisti projektissa, projektin loppuun asti.<br><br>
+
+          Tavoitteemme on tyytyväinen asiakas, joka voi suositella meitä myös ystävilleen.<br><br>
+
+          Laadukkaat ja kokonaisvaltaiset rakentamisen ja remontoinnin palvelut monen vuoden kokemuksella niin kotitalouksille kuin yrityksille Uudenmaan alueella. Ota yhteyttä !
+          {% endif %}
+          <div class="col-sm-12 text-center mt-5 mb-5">
+          <a href="Yhteydenotto" class="btn-lg bg-white border border-dark text-dark">
+            {%if English %}
+            Contact
+            {% else %}
+            Ota yhteyttä
+            {% endif %}
+          </a>
+          </div>
+          </div>
+
+          <script>
+
+              $('#luelisää').click(function () {
+              $('#luelisää').hide();
+              $('#luelisääteksti').show();
+          })
+
+          </script>
+      </div>
+      <div class="col-sm-2">
+      </div>
+    </div>
+  </div>
+    </div>
+    </section>
+
+</div>
+  </div>
+
+</div>
+
+
+
+<script>
+
+$(function() {
+ $('#Tietoapainike').click (function() {
+   $('html, body').animate({scrollTop: $('section.Tietoa').offset().top }, 'slow');
+   // Get Element
+   checkBox = document.getElementById('takenBefore');
+   // Set the `checked` field to `true`
+   checkBox.checked = false
+   return false;
+ });
+});
+
+
+</script>
+
+<style>
+
+  #refrencefirst{
+    background-image: url("{% static "background1.jpg" %}");
+    font-size: 3.5rem;
+  }
+
+#firstmiddle{
+  height:60rem;
+
+}
+
+@media screen and (max-width: 1200px) {
+  #secondmiddle {
+    font-size: 1.5rem;
+  }
+  #projektit {
+    display:none;
+  }
+
+  #raksirelogo{
+    width: 12rem; !important
+  }
+
+}
+
+
+#tietoabackground{
+
+  background-image: url("{% static "Rak3.png" %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .teksti_tietoa {
+    font-size: 1.3rem;
+    padding: 1rem; !important
+  }
+  #projektit2 {
+    display:none;
+  }
+  #tietoabackground{
+
+    background-image: url("{% static "Rak3.png" %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #raksirelogo{
+    width: 20rem;
+  }
+}
+
+
+#thirdmiddle{
+
+  border-top: 2px solid gray;
+}
+
+#middlepicture{
+box-shadow: 0 8px 6px -6px black;
+  background-image: url("{% static "Rak1-min.png" %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55rem;
+}
+
+#middlepicture2{
+
+  background-image: url("{% static "Rak2.png" %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55rem;
+}
+
+#middlepicture3{
+
+  background-image: url("{% static "Rak3.png" %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55rem;
+}
+
+
+
+
+</style>
+
+
+{% endblock %}

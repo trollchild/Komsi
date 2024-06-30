@@ -1,0 +1,204 @@
+{% extends "new_base.html" %}
+{% load static %}
+<Head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MNNGQ9KM');</script>
+<!-- End Google Tag Manager -->
+    <title>Raksire Oy - Me työskentelee sähköalan palveluiden ja rakennusprojektien parissa</title>
+    <meta name="keywords" content="Raksire oy, Sähkötyöt, rakennuspalvelut, sähköasennukset, uudellamaalla">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="description" content="Me työskentelee sähköalan palveluiden ja rakennusprojektien parissa. Tiimimme koostuu kokeneista sähköasentajista, insinööreistä ja rakennusalan ammattilaisista">
+    <!-- keywords -->
+</Head>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNNGQ9KM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVZV4SJT8D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GVZV4SJT8D');
+  gtag('config', 'AW-11171081614');
+
+</script>
+{% block content %}
+  <main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Ota yhteyttä</h2>
+          <ol>
+            <li><a href="index.html">Etusivu</a></li>
+            <li>Ota yhteyttä</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+      <!-- ======= Team Section ======= -->
+  <section id="team" class="team">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Asiakaspalvelu</h2>
+        <p>Me työskentelee sähköalan palveluiden ja rakennusprojektien parissa. Tiimimme koostuu kokeneista sähköasentajista, insinööreistä ja rakennusalan ammattilaisista, jotka ovat omistautuneita tarjoamaan korkealaatuisia ja luotettavia palveluita asiakkailleen. Jokainen henkilö Raksirella tuo mukanaan ainutlaatuisen asiantuntemuksen ja intohimon työhönsä, mikä mahdollistaa monipuolisten sähkö- ja rakennusprojektien toteuttamisen tehokkaasti ja ammattitaitoisesti. Tiimimme sitoutuu asiakastyytyväisyyteen ja turvallisuuteen kaikissa projekteissaan, olipa kyseessä sitten pieni sähköasennus tai laajempi rakennusurakka.</p>
+      </div>
+
+      <div class="row">
+
+        {% for contact in contacts %}
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="member col-sm-12">
+            <img src="{{ contact.image.url }}" class="img-fluid" alt="">
+            <div class="member-info">
+              <div class="member-info-content">
+                <h4>{{ contact.name }}</h4>
+                <span>{{ contact.designation }}</span>
+                <span>{{ contact.phone_no }}</span>
+              </div>
+
+          </div>
+
+        </div>
+              </div>
+        {% endfor %}
+
+
+
+    </div>
+  </section><!-- End Team Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Ota yhteyttä</h2>
+        <p>Ota rohkeasti yhteyttä meihin, niin autamme sinua löytämään parhaat ratkaisut sähköalan tarpeisiisi! Meiltä onnistuu myös muut rakennuspalvelut.</p>
+      </div>
+
+      <div class="row contact-info">
+
+        <div class="col-md-4">
+          <div class="contact-address">
+            <i class="bi bi-geo-alt"></i>
+            <h3>Osoite</h3>
+            <address>Vetokuja 4, 01610 vantaa </address>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="contact-phone">
+            <i class="bi bi-phone"></i>
+            <h3>Puhelinnumero</h3>
+            <p><a href="tel:+358407240999">+358 40 7240999</a></p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="contact-email">
+            <i class="bi bi-envelope"></i>
+            <h3>Sähköpost</h3>
+            <p><a href="mailto:raksire@raksire.fi">raksire@raksire.fi</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form">
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Nimi" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Sähköpostiosoite" data-rule="email" data-msg="Please enter a valid email">
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Otsikko" required>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Viesti" required></textarea>
+          </div>
+          <div class="my-3">
+            <div style="color: orange; display: none;" class="loading">Ladataan</div>
+            <div style="color: green; display: none;" class="sent">Viestisi on lähetetty. Kiitos!</div>
+            <div style="color: red; display: none;" class="error"> Something went wrong, please try again later.</div>
+          </div>
+          <div class="text-center"><button type="submit">Lähetä viesti</button></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+{% endblock %}
+
+
+{% block javascript %}
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('form').submit(function (e) {
+            debugger
+            thisForm = e.target;
+            thisForm.querySelector('.loading').style.display = 'none';
+            thisForm.querySelector('.sent').style.display = 'none';
+            thisForm.querySelector('.error').style.display = 'none';
+            e.preventDefault();
+
+            thisForm.querySelector('.loading').style.display = 'block';
+
+            $.ajax({
+                url: "{% url 'contact' %}",
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function (response) {
+                  debugger
+                    thisForm.querySelector('.loading').style.display = 'none';
+                    $('.loading').removeClass('d-block')
+                    if (response.success) {
+                        thisForm.querySelector('.sent').style.display = 'block';
+                        console.log("EMAIL Sent")
+                    } else {
+                        thisForm.querySelector('.error').style.display = 'block';
+                        console.log("Something went wrong")
+                    }
+                },
+                error: function (e) {
+                  $('.loading').removeClass('d-block')
+                  thisForm.querySelector('.loading').style.display = 'none';
+                  thisForm.querySelector('.error').style.display = 'block';
+                    // Handle AJAX request error
+                    console.log("AJAX error");
+                }
+            });
+        });
+    });
+</script>
+
+
+{% endblock %}
