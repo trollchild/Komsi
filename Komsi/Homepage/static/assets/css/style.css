@@ -151,7 +151,7 @@ h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #d0bc3f;
+  background-color: red;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -179,13 +179,13 @@ h6 {
   color: #fff;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
-  border: 2px solid #d0bc3f;
+  border: 2px solid #fff;
 }
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
   color: #fff;
-  background: #d0bc3f;
+  background: gray;
 }
 
 .navbar .getstarted:hover:before,
@@ -297,10 +297,12 @@ h6 {
   z-index: 999;
 }
 
+
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
   top: 15px;
   right: 15px;
+  color: red;
 }
 
 .navbar-mobile ul {
@@ -311,22 +313,24 @@ h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: black;
   overflow-y: auto;
   transition: 0.3s;
+
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #2a2a2a;
+  color: white;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #d0bc3f;
+  color: white;
+  border-bottom: 1px solid red;
 }
 
 .navbar-mobile>ul>li {
@@ -343,7 +347,7 @@ h6 {
 .navbar-mobile .getstarted,
 .navbar-mobile .getstarted:focus {
   margin: 15px;
-  color: #d0bc3f;
+  color: white;
   padding-left: 15px;
 }
 
@@ -356,7 +360,7 @@ h6 {
   opacity: 1;
   visibility: visible;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+
 }
 
 .navbar-mobile .dropdown ul li {
