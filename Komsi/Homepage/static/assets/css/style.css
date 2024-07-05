@@ -293,7 +293,7 @@ h6 {
   left: 0;
   bottom: 0;
   background: rgba(17, 17, 17, 0.9);
-  transition: 0.3s;
+  transition: 0.4s;
   z-index: 999;
 }
 
@@ -311,7 +311,7 @@ h6 {
   top: 55px;
   right: 15px;
   bottom: 15px;
-  left: 15px;
+  left: 100px;
   padding: 10px 0;
   background-color: black;
   overflow-y: auto;
@@ -323,7 +323,7 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: white;
+  color: #777;
 }
 
 .navbar-mobile a:hover,
@@ -418,17 +418,17 @@ h6 {
 
 #hero .carousel-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   position: absolute;
   bottom: 0;
-  top: 0;
+  top: 200px;
   left: 0;
   right: 0;
 }
 
 #hero .carousel-content {
-  text-align: center;
+  text-align: left;
 }
 
 #hero h2 {
