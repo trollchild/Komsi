@@ -43,23 +43,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <style>
   .contained-image {
-      height: 300px; /* Set your desired height */
-      width: 100%;
-      border-radius: 10px;
       overflow: hidden;
       position: relative;
+      height: 280px; /* Set your desired height */
+      max-width: 100%;
+      border-radius: 10px;
   }
 
-  .contained-image img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover; /* Ensures the image covers the container without stretching */
-      object-position: center; /* Centers the image within the container */
-      border-radius: 10px;
-      position: absolute;
-      top: 0;
-      left: 0;
-  }
+  .zoom-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-out; /* Smooth transition for zoom effect */
+}
+
+.zoom-image:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+}
+
+
 </style>
 
 <!-- Google Tag Manager (noscript) -->
@@ -147,7 +149,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="col-xl-5 mb-5 d-flex align-items-center contained-image" style="border-radius: 30px;">
-          <img src="{% static 'Katto1.jpg' %}" style="border-radius: 10px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
+          <img src="{% static 'Katto2.jpg' %}" style="border-radius: 10px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
           <img src="{% static 'DSC_2395.JPG' %}" style="border-radius: 10px; max-width:100%; display: none;" alt="Description of the image" class="img-responsive carousel-image">
           <img src="{% static 'Katto3.jpg' %}" style="border-radius: 10px; max-width:100%; display: none;" alt="Description of the image" class="img-responsive carousel-image">
       </div>
@@ -164,7 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <img src="{% static 'Katto1.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
 <div class="col-sm-12  p-3" style="background-color:white; border-radius: 10px; border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
 
-          <h4>Kattotyöt</h4>
+          <h4 style="color:rgba(219, 10, 10, 1)">Kattotyöt</h4>
           <p>I. Komsi Oy:n kokeneilta peltisepiltä onnistuu kaikenlaiset peltityöt isoista kattoremonteista haastaviin detaljiratkaisuihin.</p>
   <a class="btn btn-light text-white" style="background-color: black;">Lue Lisää</a>
 </div>
@@ -173,10 +175,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="col-md-4 mt-4" style=" ">
           <div class="col-sm-12 contained-image">
-<img src="{% static 'Kesken1.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
+<img src="{% static 'Kesken1.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive">
 <div class="col-sm-12  p-3" style="background-color:white; border-radius: 10px; border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
 
-          <h4>Korjausrakentaminen</h4>
+          <h4 style="color:rgba(219, 10, 10, 1)">Korjausrakentaminen</h4>
           <p>I. Komsi Oy:n kokeneilta peltisepiltä onnistuu kaikenlaiset peltityöt isoista kattoremonteista haastaviin detaljiratkaisuihin.</p>
   <a class="btn btn-light text-white" style="background-color: black;">Lue Lisää</a>
 </div>
@@ -189,7 +191,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <img src="{% static 'Valmis3.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
 <div class="col-sm-12  p-3" style="background-color:white; border-radius: 10px; border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
 
-          <h4>Kattolumityöt</h4>
+          <h4 style="color:rgba(219, 10, 10, 1)">Kattolumityöt</h4>
           <p>I. Komsi Oy:n kokeneilta peltisepiltä onnistuu kaikenlaiset peltityöt isoista kattoremonteista haastaviin detaljiratkaisuihin.</p>
   <a class="btn btn-light text-white" style="background-color: black;">Lue Lisää</a>
 </div>
