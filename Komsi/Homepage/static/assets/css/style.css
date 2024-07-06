@@ -712,14 +712,14 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Clients
+# Yhteistyo
 --------------------------------------------------------------*/
-.clients {
+.Yhteistyo {
   padding: 15px 0;
   text-align: center;
 }
 
-.clients img {
+.Yhteistyo img {
   max-width: 45%;
   transition: all 0.4s ease-in-out;
   display: inline-block;
@@ -727,13 +727,13 @@ section {
   filter: grayscale(100);
 }
 
-.clients img:hover {
+.Yhteistyo img:hover {
   filter: none;
   transform: scale(1.15);
 }
 
 @media (max-width: 768px) {
-  .clients img {
+  .Yhteistyo img {
     max-width: 40%;
   }
 }
@@ -750,11 +750,11 @@ section {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin-bottom: 20px;
   background: #fff;
-  border-radius: 50%;
+  border-radius: 10%;
   transition: 0.5s;
   color: #d0bc3f;
   overflow: hidden;
@@ -773,18 +773,18 @@ section {
 .services .title {
   font-weight: 600;
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 20px;
   position: relative;
   padding-bottom: 15px;
 }
 
 .services .title a {
-  color: #444444;
+  color:black;
   transition: 0.3s;
 }
 
 .services .title a:hover {
-  color: #d0bc3f;
+  color: black;
 }
 
 .services .title::after {
@@ -793,7 +793,7 @@ section {
   display: block;
   width: 50px;
   height: 2px;
-  background: #d0bc3f;
+  background-color:rgba(219, 10, 10, 1);
   bottom: 0;
   left: calc(50% - 25px);
 }
