@@ -3,6 +3,17 @@
 {% load static %}
 {% load bootstrap5 %}
 
+<style>
+.text-link {
+  color: #757575;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.text-link:hover {
+  color: red;
+}
+</style>
 <footer class="col-sm-12" id="Sticky" style="background-color: black;">
 
   <div class="col-sm-12 mt-2" style="border-bottom: solid 1px gray; background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
@@ -27,14 +38,42 @@
       <div class="col-sm-3 text-left">
         <p class="text-white h5 mt-3">Sivustolinkit</p>
         <p class="mt-3 p-2" style="color: #757575;">
-          Kattotyöt<br>
-          Korjausrakentaminen<br>
-          Kattolumityöt<br>
-          Referenssit<br>
-          Ajankohtaista<br>
-          Yhteydenotto
-        </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-link" viewBox="0 0 16 16">
+            <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+            <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+          </svg>
+          <a href="#" class="text-link">Kattotyöt</a><br>
 
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-link" viewBox="0 0 16 16">
+            <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+            <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+          </svg>
+          <a href="#" class="text-link">Korjausrakentaminen</a><br>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-link" viewBox="0 0 16 16">
+            <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+            <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+          </svg>
+          <a href="#" class="text-link">Kattolumityöt</a><br>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-link" viewBox="0 0 16 16">
+            <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+            <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+          </svg>
+          <a href="#" class="text-link">Referenssit</a><br>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-link" viewBox="0 0 16 16">
+            <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+            <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+          </svg>
+          <a href="#" class="text-link">Ajankohtaista</a><br>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-link" viewBox="0 0 16 16">
+            <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+            <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+          </svg>
+          <a href="#" class="text-link">Yhteydenotto</a>
+        </p>
       </div>
 
       <div class="col-sm-3 text-left">

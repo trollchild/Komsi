@@ -58,18 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
 .zoom-image:hover {
-    transform: scale(1.1); /* Zoom in effect on hover */
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+    transform: scale(1.1); !important /* Zoom in effect on hover */
 }
 
 </style>
@@ -108,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-container">
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-      <div class="carousel-inner" role="listbox">
+      <div class="" role="">
         <!-- Slide 2 -->
         <div class="carousel-item active" style="background-image: url(/static/DSC_2409.JPG);">
           <div class="first-texts">
@@ -224,11 +213,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section><!-- End Clients Section -->
 
+
+
   <!-- ======= Services Section ======= -->
   <section id="services" class="services">
     <div class="container">
 
-      <div class="row no-gutters" style="border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
+      <div class="row no-gutters" style="">
         <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex">
           <div class="p-3 content d-flex flex-column">
             <h2>Toiminta-alueemme on koko Suomi</h2>
@@ -243,66 +234,87 @@ Teemme kattotöitä sekä uudis- että korjausrakennuskohteisiin ympäri Suomen.
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.0929344805636!2d24.9632592776203!3d60.19574487504549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469209828328a8a1%3A0x8106a013cbc3a8e5!2sI.%20Komsi%20Oy!5e0!3m2!1sen!2sfi!4v1720251838256!5m2!1sen!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-      <div class="row mt-5">
-        <div class="col-6 col-lg-4 col-md-6 icon-box" >
+
+      <div class="row no-gutters" style="border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
+        <div class="col-xl-8 ps-0 ps-lg-5 pe-lg-1 d-flex">
+          <div class="p-3 content d-flex flex-column">
+            <h2>Katon kuntokartoitus antaa tarkan arvion katon kunnosta</h2>
+            <br>
+            <p>
+              Kuntotarkastuksen teettäminen on suositeltavaa, sillä sen avulla voidaan ajoissa tunnistaa virheet ja puutteet, jotka ajan myötä voivat aiheuttaa kiinteistön rakenteisiin merkittäviä ja haastavia vaurioita.<br><a href="/yhteystiedot/" style="color:red;">Ota yhteyttä</a>
+            </p>
+          </div><!-- End .content-->
+        </div>
+        <div class="col-xl-4 mb-5 d-flex align-items-center contained-image" style="border-radius: 30px;">
+<img src="{% static 'Katto2.jpg' %}" style="border-radius: 10px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
+        </div>
+      </div>
+      <div class="row mt-5 align-items-left">
+        <div class="col-12 col-lg-4 col-md-6 icon-box" >
                     <div class="icon p-1" style="background-color:black">
                       <img src="{% static 'ikoni.webp' %}" style="overflow: hidden; position: relative; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
 
         </div>
 
-          <h4 class="title"><a href="">Kattoturva</a></h4>
-          <p class="description">Taloyhtiön vastuulla on tehdä turvallinen työskentely katolla mahdolliseksi. Usein taloyhtiöillä ei kuitenkaan ole tietoa kattoturvatuotteiden kunnosta ja riittävyydestä. Pyynnöstänne tarkastamme kattonne turvallisuustilanteen, ja tarvittaessa suunnittelemme parannukset kattoturvaanne.</p>
+          <h4 class="title" style=""><a href="">Kattoturva</a></h4>
+          <p class="description" style="">Tietämyksellä ja kokemuksella varustetut ammattilaisemme I.Komsi Oy
+ä huolehtivat kattoturvatuotteiden asennuksesta tinkimättömällä laadulla. Luotettavuutemme perustuu vuosikymmenten kokemukseen alalta, ja sitoutumisemme asiakastyytyväisyyteen näkyy jokaisessa tekemässämme työssä.<br>
+
+</p>
         </div>
 
 
-        <div class="col-6 col-lg-4 col-md-6 icon-box" >
+        <div class="col-12 col-lg-4 col-md-6 icon-box" >
                     <div class="icon p-1" style="background-color:black">
-                      <img src="{% static 'ikoni.webp' %}" style="overflow: hidden; position: relative; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
+                      <img src="{% static 'ikoni.webp' %}" alt="Description of the image" class="img-responsive carousel-image fade-in">
 
         </div>
 
           <h4 class="title"><a href="">Peltityöt</a></h4>
-          <p class="description">Taloyhtiön vastuulla on tehdä turvallinen työskentely katolla mahdolliseksi. Usein taloyhtiöillä ei kuitenkaan ole tietoa kattoturvatuotteiden kunnosta ja riittävyydestä. Pyynnöstänne tarkastamme kattonne turvallisuustilanteen, ja tarvittaessa suunnittelemme parannukset kattoturvaanne.</p>
+          <p class="description">Peltitöissäkin I.Komsi Oy erottuu osaamisellaan ja huippulaadullaan. Tarjoamme laajan valikoiman peltitöitä aina kattopelleistä sadevesijärjestelmiin, tinkimättömällä ammattitaidolla ja kestävillä materiaaleilla toteutettuna. Olipa kyseessä uuden katon pellitys tai vanhan korjaus, voit luottaa meihin tinkimättömän laadun ja asiakastyytyväisyyden varmistajana. </p>
+
         </div>
 
 
-        <div class="col-6 col-lg-4 col-md-6 icon-box" >
+        <div class="col-12 col-lg-4 col-md-6 icon-box" >
                     <div class="icon p-1" style="background-color:black">
                       <img src="{% static 'ikoni.webp' %}" style="overflow: hidden; position: relative; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
 
         </div>
 
-          <h4 class="title"><a href="">Peltityöt</a></h4>
-          <p class="description">Taloyhtiön vastuulla on tehdä turvallinen työskentely katolla mahdolliseksi. Usein taloyhtiöillä ei kuitenkaan ole tietoa kattoturvatuotteiden kunnosta ja riittävyydestä. Pyynnöstänne tarkastamme kattonne turvallisuustilanteen, ja tarvittaessa suunnittelemme parannukset kattoturvaanne.</p>
+          <h4 class="title"><a href="">Katon kuntokartoitus</a></h4>
+          <p class="description">Kattojen kunto olisi syytä tarkastaa säännöllisesti. Ennen isoja huoltotöitä tehty kuntokartoitus ehkäisee tekemästä vääriä korjausratkaisuja. Tarjoamme myös huoltosopimuksia, joissa teemme ensin kattavan kuntokartoituksen, ja tämän jälkeen seuraamme katon kunnon kehittymistä vuosittain. Vuositarkastusten yhteydessä korjaamme pienet puutteet ja teemme tarvittavat huoltotyöt kuten kourujen tyhjennykset.</p>
         </div>
-        <div class="col-6 col-lg-4 col-md-6 icon-box" >
+        <div class="col-12 col-lg-4 col-md-6 icon-box" >
                     <div class="icon p-1" style="background-color:black">
                       <img src="{% static 'ikoni.webp' %}" style="overflow: hidden; position: relative; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
 
         </div>
 
-          <h4 class="title"><a href="">Peltityöt</a></h4>
-          <p class="description">Taloyhtiön vastuulla on tehdä turvallinen työskentely katolla mahdolliseksi. Usein taloyhtiöillä ei kuitenkaan ole tietoa kattoturvatuotteiden kunnosta ja riittävyydestä. Pyynnöstänne tarkastamme kattonne turvallisuustilanteen, ja tarvittaessa suunnittelemme parannukset kattoturvaanne.</p>
+          <h4 class="title"><a href="">Maalaus</a></h4>
+          <p class="description">Kokeneet maalarimme käsittelevät ammattitaidolla rakennusten julkisivut, asuntojen sisäpinnat, porraskäytävät, aidat ja muut käsiteltävät pinnat. </p>
         </div>
 
-        <div class="col-6 col-lg-4 col-md-6 icon-box" >
+        <div class="col-12 col-lg-4 col-md-6 icon-box" >
                     <div class="icon p-1" style="background-color:black">
                       <img src="{% static 'ikoni.webp' %}" style="overflow: hidden; position: relative; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
 
         </div>
 
-          <h4 class="title"><a href="">Peltityöt</a></h4>
-          <p class="description">Taloyhtiön vastuulla on tehdä turvallinen työskentely katolla mahdolliseksi. Usein taloyhtiöillä ei kuitenkaan ole tietoa kattoturvatuotteiden kunnosta ja riittävyydestä. Pyynnöstänne tarkastamme kattonne turvallisuustilanteen, ja tarvittaessa suunnittelemme parannukset kattoturvaanne.</p>
+          <h4 class="title"><a href="">Lumenpudotus</a></h4>
+          <p class="description">I. Komsi Oy:lla on tehokkaat ja kattoja kunnioittavat lumityöntekijät. On vahvuutemme, että teemme ympärivuotisesti töitä katoilla. Henkilökuntamme tekee työt kattoja kunnioittaen ja vahinkoa aiheuttamatta.
+<br>
+Käytämme aina katoille sopivia työvälineitä.</p>
         </div>
 
-        <div class="col-6 col-lg-4 col-md-6 icon-box" >
+        <div class="col-12 col-lg-4 col-md-6 icon-box" >
                     <div class="icon p-1" style="background-color:black">
                       <img src="{% static 'ikoni.webp' %}" style="overflow: hidden; position: relative; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
 
         </div>
 
-          <h4 class="title"><a href="">Peltityöt</a></h4>
-          <p class="description">Taloyhtiön vastuulla on tehdä turvallinen työskentely katolla mahdolliseksi. Usein taloyhtiöillä ei kuitenkaan ole tietoa kattoturvatuotteiden kunnosta ja riittävyydestä. Pyynnöstänne tarkastamme kattonne turvallisuustilanteen, ja tarvittaessa suunnittelemme parannukset kattoturvaanne.</p>
+          <h4 class="title"><a href="">Tiivistys</a></h4>
+          <p class="description">Usein ammattitaitoisesti tehty tiivistystyö säästää asiakkaan suuremmilta kustannuksilta. Meiltä löytyy Suomen huippuosaajat saksalaisen Enke Werkin Enkopur-polyuretaanimassalla tehtäviin tiivistystöihin. </p>
         </div>
 
       </div>
@@ -379,7 +391,7 @@ Teemme kattotöitä sekä uudis- että korjausrakennuskohteisiin ympäri Suomen.
     </div>
   </section><!-- End Pricing Section -->
 
-  <!-- ======= Clients Section ======= -->
+  <!-- ======= Clients Section
   <section id="clients" class="clients section-bg">
     <div class="container">
 
@@ -400,7 +412,7 @@ Teemme kattotöitä sekä uudis- että korjausrakennuskohteisiin ympäri Suomen.
       </div>
 
     </div>
-  </section><!-- End Clients Section -->
+  </section> End Clients Section -->
 
 </main><!-- End #main -->
 
