@@ -61,148 +61,141 @@ document.addEventListener("DOMContentLoaded", function() {
     transform: scale(1.1); /* Zoom in effect on hover */
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const fadeIns = document.querySelectorAll('.fade-in');
+    fadeIns.forEach(fadeIn => {
+      observer.observe(fadeIn);
+    });
+  });
+</script>
+
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNNGQ9KM"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {% block content %}
-<!-- ======= Hero Section ======= -->
+
+
+<!-- ======= Ensimmäinen kuva ja teksti ======= -->
 <section id="hero">
   <div class="hero-container">
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
       <div class="carousel-inner" role="listbox">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(/static/DSC00464.JPG);">
-          <div class="carousel-container">
-            <div class="carousel-content">
-              <h2 class="animate__animated animate__fadeInDown">Kattotyöt ammattitaidolla</h2>
-              <p class="animate__animated animate__fadeInUp">Olemme erikoistuneet erilaisiin kattotöihin </p>
-              <div>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lue lisää</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(/static/DSC_2409.JPG);">
-          <div class="carousel-container">
+        <div class="carousel-item active" style="background-image: url(/static/DSC_2409.JPG);">
+          <div class="first-texts">
             <div class="carousel-content">
-              <h2 class="animate__animated animate__fadeInDown">Korjausrakentaminen</h2>
-              <p class="animate__animated animate__fadeInUp">Meiltä onnistuu erilaiset korjaustyöt</p>
+              <h2 class="animate__animated animate__fadeInDown">Kattoremontti edessä?</h2>
+              <h3 class="animate__animated animate__fadeInUp" style="color:white;">
+                Kaikki kattotyöt Uudenmaan alueella. Korjaamme vanhaa ja asennamme uutta.
+              </h3>
               <div>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lue lisää</a>
+                <a href="#about" class="btn btn-md btn-light mt-5" style="background-color:black; color:white;">
+                  Pyydä tarjous
+                </a>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(/static/DSC00465.JPG);">
-          <div class="carousel-container">
-            <div class="carousel-content">
-              <h2 class="animate__animated animate__fadeInDown">Monipuoliset rakennuspalvelut</h2>
-              <p class="animate__animated animate__fadeInUp">Meillä on vuosien kokemus erilaisista rakennustöistä</p>
-              <div>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lue lisää</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
-
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-      </a>
-
     </div>
   </div>
-</section><!-- End Hero -->
+</section>
+
+<!-- End-->
+
 
 <main id="main">
 
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about" style="background-color: rgba(234, 234, 234, 1);">
+  <!-- ======= Tietoa meistä ja 3 palvelua ======= -->
+  <section id="about" class="about" style="background-color: white;">
     <div class="container">
-
       <div class="row no-gutters" style="border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
-      <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
-        <div class="p-3 content d-flex flex-column justify-content-center">
-          <h3>Meiltä löytyy ammattilaiset kaikille kattotyypeille. Korjaamme vanhaa ja asennamme uutta.</h3>
-          <br>
-          <p>  Tarvittaessa saat meiltä myös suunnitteluapua katetyyppiä harkitessasi.
-            Kirvesmiehemme korjaavat työn aikana paljastuvat lahovauriot ammattitaidolla. Teemme myös tarvittavat vesivahinkokorjaukset asunnoissa ja yläpohjissa.
-          </p>
-
-        </div><!-- End .content-->
-      </div>
-
-      <div class="col-xl-5 mb-5 d-flex align-items-center contained-image" style="border-radius: 30px;">
+        <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex">
+          <div class="p-3 content d-flex flex-column">
+            <h3>Meiltä löytyy ammattilaiset kaikille kattotyypeille.</h3>
+            <br>
+            <p>
+              Tarvittaessa saat meiltä myös suunnitteluapua katetyyppiä harkitessasi.
+              Kirvesmiehemme korjaavat työn aikana paljastuvat lahovauriot ammattitaidolla.
+              Teemme myös tarvittavat vesivahinkokorjaukset asunnoissa ja yläpohjissa.
+            </p>
+          </div><!-- End .content-->
+        </div>
+        <div class="col-xl-5 mb-5 d-flex align-items-center contained-image" style="border-radius: 30px;">
           <img src="{% static 'Katto2.jpg' %}" style="border-radius: 10px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
           <img src="{% static 'DSC_2395.JPG' %}" style="border-radius: 10px; max-width:100%; display: none;" alt="Description of the image" class="img-responsive carousel-image">
           <img src="{% static 'Katto3.jpg' %}" style="border-radius: 10px; max-width:100%; display: none;" alt="Description of the image" class="img-responsive carousel-image">
+        </div>
       </div>
 
-      </div>
+      <div class="col-sm-12 mt-5 align-items-center">
+        <div class="row">
+          <div class="col-md-4 mt-4 ">
+            <div class="col-sm-12">
+              <img src="{% static 'Katto1.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
+              <div class="col-sm-12 p-3" style="background-color:rgba(241, 241, 241, 1); border-top-radius: 10px; border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
+                <h4 style="color:rgba(219, 10, 10, 1)">Kattotyöt</h4>
+                <p>I. Komsi Oy:n kokeneilta peltisepiltä onnistuu kaikenlaiset peltityöt isoista kattoremonteista haastaviin detaljiratkaisuihin.</p>
+                <a class="btn btn-light text-white" style="background-color: black;">Lue Lisää</a>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-md-4 mt-4">
+            <div class="col-sm-12 contained-image">
+              <img src="{% static 'Kesken1.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive">
+              <div class="col-sm-12 p-3" style="background-color:rgba(241, 241, 241, 1); border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
+                <h4 style="color:rgba(219, 10, 10, 1)">Korjausrakentaminen</h4>
+                <p>I. Komsi Oy:n kokeneilta peltisepiltä onnistuu kaikenlaiset peltityöt isoista kattoremonteista haastaviin detaljiratkaisuihin.</p>
+                <a class="btn btn-light text-white" style="background-color: black;">Lue Lisää</a>
+              </div>
+            </div>
+          </div>
 
-
-
-    <div class="col-sm-12 mt-5 align-items-center ">
-      <div class="row">
-        <div class="col-md-4 mt-4" style=" ">
-          <div class="col-sm-12">
-<img src="{% static 'Katto1.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
-<div class="col-sm-12  p-3" style="background-color:white; border-radius: 10px; border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
-
-          <h4 style="color:rgba(219, 10, 10, 1)">Kattotyöt</h4>
-          <p>I. Komsi Oy:n kokeneilta peltisepiltä onnistuu kaikenlaiset peltityöt isoista kattoremonteista haastaviin detaljiratkaisuihin.</p>
-  <a class="btn btn-light text-white" style="background-color: black;">Lue Lisää</a>
-</div>
+          <div class="col-md-4 mt-4">
+            <div class="col-sm-12 contained-image">
+              <img src="{% static 'Valmis3.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
+              <div class="col-sm-12 p-3" style="background-color:rgba(241, 241, 241, 1); border-radius: 10px; border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
+                <h4 style="color:rgba(219, 10, 10, 1)">Kattolumityöt</h4>
+                <p>I. Komsi Oy:n kokeneilta peltisepiltä onnistuu kaikenlaiset peltityöt isoista kattoremonteista haastaviin detaljiratkaisuihin.</p>
+                <a class="btn btn-light text-white" style="background-color: black;">Lue Lisää</a>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="col-md-4 mt-4" style=" ">
-          <div class="col-sm-12 contained-image">
-<img src="{% static 'Kesken1.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive">
-<div class="col-sm-12  p-3" style="background-color:white; border-radius: 10px; border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
-
-          <h4 style="color:rgba(219, 10, 10, 1)">Korjausrakentaminen</h4>
-          <p>I. Komsi Oy:n kokeneilta peltisepiltä onnistuu kaikenlaiset peltityöt isoista kattoremonteista haastaviin detaljiratkaisuihin.</p>
-  <a class="btn btn-light text-white" style="background-color: black;">Lue Lisää</a>
-</div>
-
-          </div>
-        </div>
-
-        <div class="col-md-4 mt-4" style=" ">
-          <div class="col-sm-12 contained-image">
-<img src="{% static 'Valmis3.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
-<div class="col-sm-12  p-3" style="background-color:white; border-radius: 10px; border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
-
-          <h4 style="color:rgba(219, 10, 10, 1)">Kattolumityöt</h4>
-          <p>I. Komsi Oy:n kokeneilta peltisepiltä onnistuu kaikenlaiset peltityöt isoista kattoremonteista haastaviin detaljiratkaisuihin.</p>
-  <a class="btn btn-light text-white" style="background-color: black;">Lue Lisää</a>
-</div>
-          </div>
-        </div>
-
       </div>
     </div>
-
-        </div>
   </section><!-- End About Section -->
+
 
   <!-- ======= Clients Section ======= -->
   <section id="clients" class="clients section-bg">

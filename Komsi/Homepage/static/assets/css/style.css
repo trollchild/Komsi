@@ -74,6 +74,8 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   height: 80px;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.5); /* Lighter red with 50% opacity */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Small shadow */
 }
 
 #header .logo {
@@ -416,14 +418,14 @@ h6 {
   bottom: 0;
 }
 
-#hero .carousel-container {
+#hero .first-texts {
   display: flex;
   justify-content: left;
   align-items: left;
   position: absolute;
   bottom: 0;
-  top: 200px;
-  left: 0;
+  top: 300px;
+  left: 200px;
   right: 0;
 }
 
@@ -532,7 +534,7 @@ h6 {
   animation-delay: 0.8s;
   text-transform: uppercase;
   border: 2px solid #d0bc3f;
-  background: #d0bc3f;
+  background: red;
 }
 
 #hero .btn-get-started:hover {
@@ -544,6 +546,16 @@ h6 {
 @media (max-width: 768px) {
   #hero h2 {
     font-size: 28px;
+  }
+  #hero .first-texts {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    position: absolute;
+    bottom: 0;
+    top: 200px;
+    left: 10px;
+    right: 0;
   }
 }
 
@@ -582,6 +594,7 @@ section {
   padding-bottom: 0;
   color: #d0bc3f;
 }
+
 
 .section-title p {
   margin-bottom: 0;
