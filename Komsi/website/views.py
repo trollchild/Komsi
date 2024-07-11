@@ -25,6 +25,11 @@ def Projektit(request):
     Projektit = "Projektit"
     return render(request, 'Projektit.html', context={'Projektit':Projektit})
 
+def Yhteydenotto(request):
+    Yhteydenotto = "Yhteydenotto"
+    return render(request, 'Yhteydenotto.html', context={'Yhteydenotto':Yhteydenotto})
+
+
 
 def contact(request):
 

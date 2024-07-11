@@ -74,16 +74,12 @@
           <li><a class="nav-link" href="{% url 'Projektit' %}">Referenssit</a></li>
           {% endif %}
 
-          {% if Ajankohtaista %}
-          <li><a class="nav-link active" href="{% url 'blog_listing_page' %}">Ajankohtaista</a></li>
-          {% else %}
-          <li><a class="nav-link" href="{% url 'blog_listing_page' %}">Ajankohtaista</a></li>
-          {% endif %}
           {% if yhteydenotto %}
-          <li><a class="nav-link active" href="{% url 'contact' %}">Yhteydenotto</a></li>
+          <li><a class="nav-link active" href="{% url 'Yhteydenotto' %}">Yhteydenotto</a></li>
           {% else %}
-          <li><a class="nav-link" href="{% url 'contact' %}">Yhteydenotto</a></li>
+          <li><a class="nav-link" href="{% url 'Yhteydenotto' %}">Yhteydenotto</a></li>
           {% endif %}
+          
           <li><a class="getstarted scrollto" href="mailto:myynti@komsi.net">Pyydä tarjous</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
