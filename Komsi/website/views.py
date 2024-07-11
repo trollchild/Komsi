@@ -26,8 +26,31 @@ def Projektit(request):
     return render(request, 'Projektit.html', context={'Projektit':Projektit})
 
 def Yhteydenotto(request):
-    Yhteydenotto = "Yhteydenotto"
-    return render(request, 'Yhteydenotto.html', context={'Yhteydenotto':Yhteydenotto})
+
+    if request.method == "POST":
+        # get form values
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+
+        try:
+            send_mail(
+                subject,
+                f'Name: {name}\nEmail: {email}\n\n{message}',
+                settings.EMAIL_HOST_USER,  # Sender's email
+                [settings.EMAIL_HOST_USER],  # List of recipients
+                fail_silently=False,
+            )
+            return JsonResponse({'success': True})
+        except Exception as e:
+            print(e)
+            return JsonResponse({'success': False, 'error': str(e)})
+
+    yhteydenotto = "yhteydenotto"
+    contacts = Contact.objects.all()
+    return render(request, 'Yhteydenotto.html', context={'yhteydenotto':yhteydenotto,'contacts': contacts})
+
 
 
 
