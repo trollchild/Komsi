@@ -21,6 +21,10 @@ def Lumenpudotus(request):
     Lumenpudotus = "Lumenpudotus"
     return render(request, 'Lumenpudotus.html', context={'Lumenpudotus':Lumenpudotus})
 
+def Projektit(request):
+    Projektit = "Projektit"
+    return render(request, 'Projektit.html', context={'Projektit':Projektit})
+
 
 def contact(request):
 
@@ -143,7 +147,7 @@ def project_listing_page(request):
     projects = Project.objects.all()
     print(projects)
     context = {'referenssit': referenssit,'projects': projects, 'has_next': has_next}
-    return render(request, 'projects.html', context)
+    return render(request, 'Referenssit.html', context)
 
 
 """
