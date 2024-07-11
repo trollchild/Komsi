@@ -13,6 +13,10 @@ def index(request):
     etusivu = "etusivu"
     return render(request, 'home.html', context={'etusivu':etusivu})
 
+def Korjausrakentaminen(request):
+    Korjausrakentaminen = "Korjausrakentaminen"
+    return render(request, 'Kattotyot.html', context={'Korjausrakentaminen':Korjausrakentaminen})
+
 
 def contact(request):
 
