@@ -17,6 +17,10 @@ def Korjausrakentaminen(request):
     Korjausrakentaminen = "Korjausrakentaminen"
     return render(request, 'Kattotyot.html', context={'Korjausrakentaminen':Korjausrakentaminen})
 
+def Lumenpudotus(request):
+    Lumenpudotus = "Lumenpudotus"
+    return render(request, 'Lumenpudotus.html', context={'Lumenpudotus':Lumenpudotus})
+
 
 def contact(request):
 

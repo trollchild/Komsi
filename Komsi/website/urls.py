@@ -8,6 +8,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name='home'),
     path('Korjausrakentaminen/', views.Korjausrakentaminen, name='Korjausrakentaminen'),
+    path('Lumenpudotus/', views.Lumenpudotus, name='Lumenpudotus'),
     path('projects/', views.project_listing_page, name='project_listing_page'),
     path('projects/<str:project_slug>/', views.project_detail, name='project_detail'),
     path('blogs/', views.blog_listing_page, name='blog_listing_page'),
