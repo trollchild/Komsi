@@ -50,16 +50,16 @@ document.addEventListener("DOMContentLoaded", function() {
       border-radius: 10px;
   }
 
-  .zoom-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-out; /* Smooth transition for zoom effect */
-}
+  .image-container {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+  }
 
-.zoom-image:hover {
-    transform: scale(1.1); !important /* Zoom in effect on hover */
-}
+  .zoom-image {
+    transform: scale(1.5);
+  }
+
 
 </style>
 
@@ -102,13 +102,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="carousel-item active" style="background-image: url(/static/Katto1.jpg);">
           <div class="first-texts">
             <div class="carousel-content">
-              <h2 class="animate__animated animate__fadeInDown">Kattoremontti edessä?</h2>
+              <h2 class="animate__animated animate__fadeInDown">Kaikki kattotyöt pääkaupunkiseudulla</h2>
               <h3 class="animate__animated animate__fadeInUp" style="color:white;">
-                Kaikki kattotyöt Uudenmaan alueella. Korjaamme vanhaa ja asennamme uutta.
+                Kattoremontti edessä? Korjaamme vanhaa ja asennamme uutta vuosien kokemuksella.<br>Ota yhteyttä ja pyydä tarjous!
               </h3>
               <div>
-                <a href="#about" class="btn btn-md btn-light mt-5" style="background-color:black; color:white;">
-                  Pyydä tarjous
+                <a href="#about" class="btn btn-lg btn-light mt-5" style="background-color:black; color:white;">
+                  Soita 045 1876101
                 </a>
               </div>
             </div>
@@ -148,9 +148,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="col-sm-12 mt-5 align-items-center">
         <div class="row">
-          <div class="col-md-4 mt-4 ">
-            <div class="col-sm-12">
-              <img src="{% static 'Katto1.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
+          <div class="col-md-4 mt-4" >
+            <div class="col-sm-12 image-container" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px;" >
+              <img src="{% static 'Katto1.jpg' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="zoom-image">
               <div class="col-sm-12 p-3" style="background-color:rgba(251, 251, 251, 1); border-top-radius: 10px; border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
                 <h4 style="black">Kattotyöt</h4>
                 <p><span style="color: rgba(219, 10, 10, 1);">I. Komsi Oy</span>:n kokeneilta peltisepiltä onnistuu kaikenlaiset peltityöt isoista kattoremonteista haastaviin detaljiratkaisuihin.</p>
@@ -160,7 +160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <div class="col-md-4 mt-4">
-            <div class="col-sm-12 contained-image">
+            <div class="col-sm-12 contained-image" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px;">
               <img src="{% static 'Kesken1.JPG' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive">
               <div class="col-sm-12 p-3" style="background-color:rgba(251, 251, 251, 1); border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
                 <h4 style="color:black">Korjausrakentaminen</h4>
@@ -171,9 +171,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <div class="col-md-4 mt-4">
-            <div class="col-sm-12 contained-image">
+            <div class="col-sm-12 contained-image" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px;">
               <img src="{% static 'Valmis3.JPG' %}" style="overflow: hidden; position: relative; height: 280px; max-width:100%;" alt="Description of the image" class="img-responsive carousel-image">
-              <div class="col-sm-12 p-3" style="background-color:rgba(251, 251, 251, 1); border-radius: 10px; border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
+              <div class="col-sm-12 p-3" style="background-color:rgba(251, 251, 251, 1);  border-bottom: 2px solid rgba(219, 10, 10, 1) !important;">
                 <h4 style="color:black">Kattolumityöt</h4>
                 <p><span style="color:rgba(219, 10, 10, 1)">I. Komsi Oy</span>:n kokeneilta peltisepiltä onnistuu kaikenlaiset peltityöt isoista kattoremonteista haastaviin detaljiratkaisuihin.</p>
                 <a class="btn btn-light text-white" style="width: 100%; background-color: rgba(219, 10, 10, 1);">Lue Lisää</a>

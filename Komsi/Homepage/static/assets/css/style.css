@@ -74,7 +74,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   height: 80px;
-  border-bottom: 1px solid rgba(255, 0, 0, 0.5); /* Lighter red with 50% opacity */
+  border-bottom: 2px solid rgba(255, 0, 0, 0.5); /* Lighter red with 50% opacity */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Small shadow */
 }
 
@@ -651,6 +651,7 @@ section {
 
   .about .image img {
     max-width: 80%;
+
   }
 }
 
