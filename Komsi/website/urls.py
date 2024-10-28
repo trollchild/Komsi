@@ -11,10 +11,4 @@ urlpatterns = [
     path('Lumenpudotus/', views.Lumenpudotus, name='Lumenpudotus'),
     path('Projektit/', views.Projektit, name='Projektit'),
     path('Yhteydenotto/', views.Yhteydenotto, name='Yhteydenotto'),
-    path('projects/', views.project_listing_page, name='project_listing_page'),
-    path('projects/<str:project_slug>/', views.project_detail, name='project_detail'),
-    path('blogs/', views.blog_listing_page, name='blog_listing_page'),
-    path('blogs/<str:blog_slug>/', views.blog_post_detail, name='blog_post_detail'),
-    path('services/', views.services, name='services'),
-    path('contact/', views.contact, name='contact'),
 ]
