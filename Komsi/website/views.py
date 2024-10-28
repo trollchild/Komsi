@@ -25,6 +25,10 @@ def Projektit(request):
     Projektit = "Projektit"
     return render(request, 'Projektit.html', context={'Projektit':Projektit})
 
+def Sitemap(request):
+    return render(request, 'sitemap.xml',)
+
+
 def Yhteydenotto(request):
 
     if request.method == "POST":
