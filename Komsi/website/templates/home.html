@@ -41,7 +41,35 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const iconBoxes = document.querySelectorAll('.icon-box');
+
+    function checkVisibility() {
+      const windowHeight = window.innerHeight;
+
+      iconBoxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+
+        // If the box is in the viewport, add the 'visible' class
+        if (boxTop < windowHeight && boxTop > 0) {
+          box.classList.add('visible');
+        }
+      });
+    }
+
+    // Check visibility on scroll and on load
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Initial check on load
+  });
+</script>
+
+
 <style>
+
+
+
+
   .contained-image {
       overflow: hidden;
       position: relative;
@@ -63,27 +91,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </style>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const observerOptions = {
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    const fadeIns = document.querySelectorAll('.fade-in');
-    fadeIns.forEach(fadeIn => {
-      observer.observe(fadeIn);
-    });
-  });
-</script>
 
 
 <!-- Google Tag Manager (noscript) -->
@@ -107,7 +114,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Kattoremontti edessä? Korjaamme vanhaa ja asennamme uutta vuosien kokemuksella.<br>Ota yhteyttä ja pyydä tarjous!
               </h3>
               <div>
-                <a href="#about" class="btn btn-md btn-light mt-5" style="background-color:black; color:white;">
+                <a href="tel:0451876101" class="btn btn-md btn-light mt-5" style="background-color:black; color:white;">
                   Soita 045 1876101
                 </a>
               </div>
@@ -146,9 +153,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <div class="col-sm-12 mt-5 align-items-center">
+      <div class="col-sm-12 mt-5 align-items-centerx">
         <div class="row">
-          <div class="col-md-4 mt-4" >
+          <div class="col-md-4 mt-4 " >
             <div class="col-sm-12 image-container" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;" >
               <img src="{% static 'Katto1.jpg' %}" loading="lazy" style="width: 100%; height: 270px; object-fit: cover;" alt="Description of the image" class="zoom-image">
               <div class="col-sm-12 p-3" style="background-color:rgba(251, 251, 251, 1); border-top-radius: 10px; border-bottom: 2px solid rgba(219, 10, 10, 1); min-height:240px; !important;">
